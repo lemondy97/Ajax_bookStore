@@ -80,8 +80,8 @@
         #slider { width: 100%; height: 356px; position: relative; }
         #slider #banner_container { width: 100%; height: 316px; position: relative; background-color: #dbf1ff; }
         #banner_container .slide_banner { width: 760px; height: 316px; position: absolute; top: 0; left: 30%; }
-        .slide_banner .arrow_left { position: absolute; top: 35%; left: -10%; cursor: pointer; }
-        .slide_banner .arrow_right { position: absolute; top: 35%; right: 7%; cursor: pointer; }
+        .slide_banner .arrow_left { display: none; position: absolute; top: 35%; left: 1%; cursor: pointer; }
+        .slide_banner .arrow_right { display: none; position: absolute; top: 35%; right: 7%; cursor: pointer; }
 
         #slider #select_container { width: 100%; height: 40px; background-color: #f7f7f7; position: relative; }
         #select_container #select_menu { width: 40%; height: 40px; position: absolute; top: 0; left: 30%; }
@@ -90,8 +90,8 @@
         
         #slider .mini_ad { width: 60px; height: 90px; position: absolute; top: 5%;  left: 15%;}
         .mini_ad .hidden_adImage { display: none; width: 980px; height: 363px; position: relative; }
-        .mini_ad .close1 { display: none; width: 150px; height: 30px; position: absolute; bottom: 10px; right: 10px; background-color: gainsboro; 
-                           border: 1px solid #333; line-height: 20px; display: block; }
+        .mini_ad .close1 { display: none; width: 60px; height: 30px; position: absolute; bottom: 10px; right: 10px; background-color: #fff; 
+                           border: 1px solid #333; line-height: 20px; display: block; cursor: pointer; }
 
 
     </style>
@@ -212,6 +212,28 @@
                     }
                 </script>
 
+                <script>
+                    $(function(){
+                        $('.many_images').mouseenter(function(){
+                            $('.arrow_left').stop().fadeIn(250);
+                            $('.arrow_right').stop().fadeIn(250);
+                        }).mouseleave(function(){
+                            $('.arrow_left').stop().fadeOut(250);
+                            $('.arrow_right').stop().fadeOut(250);
+                        });
+                        $('.arrow_left').mouseover(function(){
+                            $(this).stop().fadeIn(250);
+                        }).mouseout(function(){
+                            $(this).stop().fadeOut(250);
+                        });
+                        $('.arrow_right').mouseover(function(){
+                            $(this).stop().fadeIn(250);
+                        }).mouseout(function(){
+                            $(this).stop().fadeOut(250);
+                        });
+                    });
+                </script>
+
             </div>
             <div id="select_container">
                 <ul id="select_menu">
@@ -226,7 +248,7 @@
                 <img src="img/main/ad_miniSize.png" alt="광고 이미지">
                 <div class="hidden_adImage">
                     <img src="img/main/ad_hiddenImage.png" alt="책 설명 이미지">
-                    <a class="close1">오늘은 그만보기</a>
+                    <a class="close1">X 닫기</a>
                 </div>
             </div>
 
