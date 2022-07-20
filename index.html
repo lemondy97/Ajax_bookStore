@@ -90,9 +90,22 @@
         
         #slider .mini_ad { width: 60px; height: 90px; position: absolute; top: 5%;  left: 15%;}
         .mini_ad .hidden_adImage { display: none; width: 980px; height: 363px; position: relative; }
-        .mini_ad .close1 { display: none; width: 60px; height: 30px; position: absolute; bottom: 10px; right: 10px; background-color: #fff; 
-                           border: 1px solid #333; line-height: 20px; display: block; cursor: pointer; }
+        .mini_ad .close1 { display: none; width: 60px; height: 25px; position: absolute; bottom: 10px; right: 10px; background-color: #fff; 
+                           border: 1px solid #333; line-height: 20px; display: block; cursor: pointer; font-family: 'GmarketSansMedium'; }
 
+        #slider .hidden_images2, .hidden_images3 { display: none; }
+        
+        #slider #select_menu li a { position: relative; transition: 0.5s; }
+
+        #select_menu li a.active::after { position: absolute; top: -20%; left: 0; content: ""; background-color: red; width: 100%; height: 5px;
+                                          transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
+        
+        #slider #best_sellerList { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 19%; }
+        #best_sellerList .table_menu1 { border: 1px solid #666; cursor: pointer; }
+        #best_sellerList .table_menu2 { border: 1px solid #666; cursor: pointer; }
+
+        #best_sellerList .ranking:hover { text-decoration: underline; cursor: pointer; }
+        #best_sellerList td { font-family: 'GmarketSansLight'; font-size: 12px; }
 
     </style>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
@@ -183,38 +196,86 @@
         <div id="slider">
             <div id="banner_container">
                 <div class="slide_banner">
-                    <img src="img/main/slider_image1.png" class="many_images">
+                    <img src="img/main/slider_image1.png" class="hidden_images1">
+                    <img src="img/main/slider_image2.jpg" class="hidden_images2">
+                    <img src="img/main/slider_image3.png" class="hidden_images3">
+                    
+                </div>
+
+                <div>
                     <img src="img/main/arrow_left.png" alt="왼쪽 넘기기" class="arrow_left" onclick="prev();">
                     <img src="img/main/arrow_right.png" alt="오른쪽 넘기기" class="arrow_right" onclick="next();">
                 </div>
 
                 <script>
-                    var images = [ "img/main/slider_image1.png", "img/main/slider_image2.png", "img/main/slider_image3.jpg", "img/main/slider_image4.png", "img/main/slider_image5.png", "img/main/slider_image6.png", "img/main/slider_image7.png" ]
-                    var num = 0;
-                    function next(){
-                        var slider = document.getElementsByClassName('many_images');
-                        num++;
-                    }
+                    let slideIndex = 0;
+                    showslideImage();
 
-                    if(num >= images.length){
-                        num = 0;
-                    }
-                    many_images.src = images[num];
-
-                    function prev(){
-                        var slider = document.getElementsByClassName('many_images');
-                        num--;
-
-                        if(num < 0){
-                            num = images.length - 1;
+                    function showslideImage(){
+                        let i;
+                        let slide = document.querySelectorAll('.slide_banner img');
+                        for(i = 0; i<slide.length; i++){
+                            slide[i].style.display = none;
                         }
-                        many_images.src = images[num];
+                        slideIndex++;
+                        if(slideIndex > slide.length){
+                            slideIndex = 1;
+                            
+                        }
+                        slide[slideIndex-1].style.display = "block";
+                        setTimeout(showslideImage, 3000);
                     }
                 </script>
 
                 <script>
                     $(function(){
-                        $('.many_images').mouseenter(function(){
+                        $('.slide_list1').hover(function(){
+                            $('.hidden_images1').css("display", "block");
+                            $('.slide_list1 a').addClass('active');
+                            $('.slide_list2 a').removeClass('active');
+                            $('.slide_list3 a').removeClass('active');
+                            $('.slide_list4 a').removeClass('active');
+                            $('.hidden_images2').css("display", "none");
+                            $('.hidden_images3').css("display", "none");
+                        });
+
+                        $('.slide_list2').hover(function(){
+                            $('.hidden_images1').css("display", "none");
+                            $('.slide_list1 a').removeClass('active');
+                            $('.slide_list2 a').addClass('active');
+                            $('.slide_list3 a').removeClass('active');
+                            $('.slide_list4 a').removeClass('active');
+                            $('#banner_container').css("background-color", "white");
+                            $('.hidden_images2').css("display", "block");
+                            $('.hidden_images3').css("display", "none");
+                        });
+
+                        $('.slide_list3').hover(function(){
+                            $('.hidden_images1').css("display", "none");
+                            $('.slide_list1 a').removeClass('active');
+                            $('.slide_list2 a').removeClass('active');
+                            $('.slide_list3 a').addClass('active');
+                            $('.slide_list4 a').removeClass('active');
+                            $('.hidden_images2').css("display", "none");
+                            $('.hidden_images3').css("display", "block");
+                        });
+
+                        $('slide_list4').hover(function(){
+                            $('.slide_list1 a').removeClass('active');
+                            $('.slide_list2 a').removeClass('active');
+                            $('.slide_list3 a').removeClass('active');
+                            $('.slide_list4 a').addClass('active');
+                        });
+                    });
+                </script>
+
+                <script>
+
+                </script>
+
+                <script>
+                    $(function(){
+                        $('#slider').mouseenter(function(){
                             $('.arrow_left').stop().fadeIn(250);
                             $('.arrow_right').stop().fadeIn(250);
                         }).mouseleave(function(){
@@ -237,10 +298,10 @@
             </div>
             <div id="select_container">
                 <ul id="select_menu">
-                    <li><a>핫클릭 이벤트</a></li>
-                    <li><a>유시민 작가 신작</a></li>
-                    <li><a>추천 이벤트</a></li>
-                    <li><a>화제의 책</a></li>
+                    <li class="slide_list1"><a class="active">핫클릭 이벤트</a></li>
+                    <li class="slide_list2"><a >유시민 작가 신작</a></li>
+                    <li class="slide_list3"><a >추천 이벤트</a></li>
+                    <li class="slide_list4"><a>화제의 책</a></li>
                 </ul>
             </div>
 
@@ -254,7 +315,7 @@
 
             <script>
                 $(function(){
-                    $('.mini_ad').mouseover(function(){
+                    $('.mini_ad > img').mouseover(function(){
                         $('.hidden_adImage').stop().slideDown();
                         
                     });
@@ -263,6 +324,57 @@
                     });
                 });
             </script>
+
+            <table id="best_sellerList">
+                <tr>
+                    <th>베스트 셀러</th>
+                </tr>
+                <tr>
+                    <th class="table_menu1">오늘</th>
+                    <th class="table_menu2">주간</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="ranking">헤어질 결심 각본</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="ranking">역행자</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="ranking">파친코 1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="ranking">불편한 편의점(40만부 기념판)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="ranking">말의 알고리즘</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="ranking">ETS 토익 정기시험 기출문제1</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="ranking">ETS 토익 정기시험 기출문제2</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="ranking">당신이라는 기적</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="ranking">계속 가보겠습니다</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="ranking">작별인사</td>
+                </tr>
+                
+            </table>
 
         </div>
 
