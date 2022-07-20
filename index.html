@@ -36,12 +36,12 @@
         #menu1 li:nth-of-type(2) a:visited { color: red; }
         #menu2 li a:visited { color: #333; }
 
-        #banner_container { width: 100%; height: 70px; display: flex; }
-        #banner_container .banner_box1 { width: 50%; height: 70px; background-color: #3ab2ff; position: relative; }
-        #banner_container .banner_box2 { width: 50%; height: 70px; background-color: #c2a59d; position: relative; }
+        #banner_container1 { width: 100%; height: 70px; display: flex; }
+        #banner_container1 .banner_box1 { width: 50%; height: 70px; background-color: #3ab2ff; position: relative; }
+        #banner_container1 .banner_box2 { width: 50%; height: 70px; background-color: #c2a59d; position: relative; }
 
-        #banner_container .event_banner1 { width: 480px; height: 70px; cursor: pointer; position: absolute; top: 0; right: 0; }
-        #banner_contanier .event_banner2 { width: 480px; height: 70px; cursor: pointer; position: absolute; top: 0; left: 0; }
+        #banner_container1 .event_banner1 { width: 480px; height: 70px; cursor: pointer; position: absolute; top: 0; right: 0; }
+        #banner_contanier1 .event_banner2 { width: 480px; height: 70px; cursor: pointer; position: absolute; top: 0; left: 0; }
 
         header { width: 100%; height: 172px; display: flex; flex-wrap: wrap; }
         header #menu_box1 { width: 50%; height: 32px; position: relative; border-bottom: 1px solid lightgray; }
@@ -78,10 +78,9 @@
 
 
         #slider { width: 100%; height: 356px; position: relative; }
-        #slider #banner_container { width: 100%; height: 316px; position: relative; background-color: #dbf1ff; }
-        #banner_container .slide_banner { width: 760px; height: 316px; position: absolute; top: 0; left: 30%; }
-        .slide_banner .arrow_left { display: none; position: absolute; top: 35%; left: 1%; cursor: pointer; }
-        .slide_banner .arrow_right { display: none; position: absolute; top: 35%; right: 7%; cursor: pointer; }
+        #slider #banner_container2 { width: 100%; height: 316px; position: relative; background-color: #dbf1ff; }
+        #banner_container2 .slide_banner { width: 760px; height: 316px; position: absolute; top: 0; left: 30%; }
+
 
         #slider #select_container { width: 100%; height: 40px; background-color: #f7f7f7; position: relative; }
         #select_container #select_menu { width: 40%; height: 40px; position: absolute; top: 0; left: 30%; }
@@ -90,6 +89,8 @@
         
         #slider .mini_ad { width: 60px; height: 90px; position: absolute; top: 5%;  left: 15%;}
         .mini_ad .hidden_adImage { display: none; width: 980px; height: 363px; position: relative; }
+        .mini_ad p { width: 55px; font-size: 10px; text-align: center; background-color: #fff; border: 1px solid lightgray; border-radius: 15px; }
+        .mini_ad p a { color: red; }
         .mini_ad .close1 { display: none; width: 60px; height: 25px; position: absolute; bottom: 10px; right: 10px; background-color: #fff; 
                            border: 1px solid #333; line-height: 20px; display: block; cursor: pointer; font-family: 'GmarketSansMedium'; }
 
@@ -97,15 +98,39 @@
         
         #slider #select_menu li a { position: relative; transition: 0.5s; }
 
-        #select_menu li a.active::after { position: absolute; top: -20%; left: 0; content: ""; background-color: red; width: 100%; height: 5px;
+        #select_menu li a.active::after { position: absolute; top: -20%; left: 0; content: ""; background-color: red; width: 100%; height: 4.5px;
                                           transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
         
-        #slider #best_sellerList { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 19%; }
-        #best_sellerList .table_menu1 { border: 1px solid #666; cursor: pointer; }
-        #best_sellerList .table_menu2 { border: 1px solid #666; cursor: pointer; }
+        #slider #selected_table { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.8%; }
+        #selected_table .table_menu1 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; }
+        #selected_table .table_menu2 { border: 2px solid #666; cursor: pointer; }
 
-        #best_sellerList .ranking:hover { text-decoration: underline; cursor: pointer; }
-        #best_sellerList td { font-family: 'GmarketSansLight'; font-size: 12px; }
+        #selected_table .rank { width: 20%; }
+        #selected_table .ranking { width: 80%; }
+        #selected_table .ranking:hover { text-decoration: underline; cursor: pointer; }
+        #selected_table td { font-family: 'GmarketSansLight'; font-size: 12px; }
+        #selected_table th { font-size: 14px; }
+        #selected_table .first_th { width: 100px; }
+
+        #slider #hidden_table { display: none; background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.8%; }
+        #hidden_table .table_menu1 { border: 2px solid #666; cursor: pointer; }
+        #hidden_table .table_menu2 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; }
+
+        #hidden_table .rank { width: 20%; }
+        #hidden_table .ranking { width: 80%; }
+        #hidden_table .ranking:hover { text-decoration: underline; cursor: pointer; }
+        #hidden_table td { font-family: 'GmarketSansLight'; font-size: 12px; }
+        #hidden_table th { font-size: 14px; }
+        #hidden_table .first_th { width: 100px; }
+
+        #slider #ajax_bookContainer1 { width: 760px; height: 316px; display: flex; justify-content: space-around; position: absolute; top:0; left: 30%; }
+        #ajax_bookContainer1 h3 { width: 75%; }
+
+
+        section { width: 100%; height: 1000px; }
+        section #ad_container { width: 65%; height: 80px; margin: 0 auto; display: flex; justify-content: space-around; }
+
+
 
     </style>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
@@ -113,7 +138,7 @@
 <body>
     <div id="wrap">
 
-        <div id="banner_container">
+        <div id="banner_container1">
             <div class="banner_box1">
                 <div class="event_banner1">
                     <img src="img/main/banner1.jpg" alt="이벤트 배너">
@@ -194,7 +219,7 @@
 
 
         <div id="slider">
-            <div id="banner_container">
+            <div id="banner_container2">
                 <div class="slide_banner">
                     <img src="img/main/slider_image1.png" class="hidden_images1">
                     <img src="img/main/slider_image2.jpg" class="hidden_images2">
@@ -202,16 +227,14 @@
                     
                 </div>
 
-                <div>
-                    <img src="img/main/arrow_left.png" alt="왼쪽 넘기기" class="arrow_left" onclick="prev();">
-                    <img src="img/main/arrow_right.png" alt="오른쪽 넘기기" class="arrow_right" onclick="next();">
-                </div>
+                
 
-                <script>
+            </div>
+            <script>
                     let slideIndex = 0;
-                    showslideImage();
+                    showSlideImage();
 
-                    function showslideImage(){
+                    function showSlideImage(){
                         let i;
                         let slide = document.querySelectorAll('.slide_banner img');
                         for(i = 0; i<slide.length; i++){
@@ -223,20 +246,24 @@
                             
                         }
                         slide[slideIndex-1].style.display = "block";
-                        setTimeout(showslideImage, 3000);
+                        setTimeout(showSlideImage, 3000);
                     }
                 </script>
 
                 <script>
                     $(function(){
+                        $('#ajax_bookContainer1').css("display", "none");
+
                         $('.slide_list1').hover(function(){
                             $('.hidden_images1').css("display", "block");
                             $('.slide_list1 a').addClass('active');
                             $('.slide_list2 a').removeClass('active');
                             $('.slide_list3 a').removeClass('active');
                             $('.slide_list4 a').removeClass('active');
+                            $('#banner_container2').css("background-color", "#dbf1ff");
                             $('.hidden_images2').css("display", "none");
                             $('.hidden_images3').css("display", "none");
+                            $('#ajax_bookContainer1').css("display", "none");
                         });
 
                         $('.slide_list2').hover(function(){
@@ -245,9 +272,10 @@
                             $('.slide_list2 a').addClass('active');
                             $('.slide_list3 a').removeClass('active');
                             $('.slide_list4 a').removeClass('active');
-                            $('#banner_container').css("background-color", "white");
+                            $('#banner_container2').css("background-color", "white");
                             $('.hidden_images2').css("display", "block");
                             $('.hidden_images3').css("display", "none");
+                            $('#ajax_bookContainer1').css("display", "none");
                         });
 
                         $('.slide_list3').hover(function(){
@@ -256,46 +284,28 @@
                             $('.slide_list2 a').removeClass('active');
                             $('.slide_list3 a').addClass('active');
                             $('.slide_list4 a').removeClass('active');
+                            $('#banner_container2').css("background-color", "white");
                             $('.hidden_images2').css("display", "none");
                             $('.hidden_images3').css("display", "block");
+                            $('#ajax_bookContainer1').css("display", "none");
                         });
 
-                        $('slide_list4').hover(function(){
+                        $('.slide_list4').hover(function(){
+                            $('.hidden_images1').css("display", "none");
                             $('.slide_list1 a').removeClass('active');
                             $('.slide_list2 a').removeClass('active');
                             $('.slide_list3 a').removeClass('active');
                             $('.slide_list4 a').addClass('active');
+                            $('#banner_container2').css("background-color", "white");
+                            $('.hidden_images2').css("display", "none");
+                            $('.hidden_images3').css("display", "none");
+                            $('#ajax_bookContainer1').css("display", "flex");
                         });
                     });
                 </script>
 
-                <script>
 
-                </script>
 
-                <script>
-                    $(function(){
-                        $('#slider').mouseenter(function(){
-                            $('.arrow_left').stop().fadeIn(250);
-                            $('.arrow_right').stop().fadeIn(250);
-                        }).mouseleave(function(){
-                            $('.arrow_left').stop().fadeOut(250);
-                            $('.arrow_right').stop().fadeOut(250);
-                        });
-                        $('.arrow_left').mouseover(function(){
-                            $(this).stop().fadeIn(250);
-                        }).mouseout(function(){
-                            $(this).stop().fadeOut(250);
-                        });
-                        $('.arrow_right').mouseover(function(){
-                            $(this).stop().fadeIn(250);
-                        }).mouseout(function(){
-                            $(this).stop().fadeOut(250);
-                        });
-                    });
-                </script>
-
-            </div>
             <div id="select_container">
                 <ul id="select_menu">
                     <li class="slide_list1"><a class="active">핫클릭 이벤트</a></li>
@@ -305,13 +315,79 @@
                 </ul>
             </div>
 
+            <div id="ajax_bookContainer1">
+                <div class="ajax_box1">
+                </div>
+                <div class="ajax_box2">
+                </div>
+                <div class="ajax_box3">
+                </div>
+                <div class="ajax_box4">
+                </div>
+            </div>
+
+            <script>
+                $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: "파친코" },
+                    headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
+                })
+                    .done(function(msg){
+                        $(".ajax_box1").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+                        $(".ajax_box1").append("<h3>" + msg.documents[0].title + "</h3>");
+                        $(".ajax_box1").append("<h5>" + msg.documents[0].authors[0] + "<h5>");
+                    });
+
+
+                    $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: "계속 가 보겠습니다" },
+                    headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
+                })
+                    .done(function(msg2){
+                        $(".ajax_box2").append("<img src='" + msg2.documents[0].thumbnail + "'/>");
+                        $(".ajax_box2").append("<h3>" + msg2.documents[0].title + "</h3>");
+                        $(".ajax_box2").append("<h5>" + msg2.documents[0].authors[0] + "<h5>");
+                    });
+
+                    $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: "책 먹는 여우의 여름 이야기" },
+                    headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
+                })
+                    .done(function(msg3){
+                        $(".ajax_box3").append("<img src='" + msg3.documents[0].thumbnail + "'/>");
+                        $(".ajax_box3").append("<h3>" + msg3.documents[0].title + "</h3>");
+                        $(".ajax_box3").append("<h5>" + msg3.documents[0].authors[0] + "<h5>");
+                    });
+
+                    $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: "사장을 위한 정관정요" },
+                    headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
+                })
+                    .done(function(msg4){
+                        $(".ajax_box4").append("<img src='" + msg4.documents[0].thumbnail + "'/>");
+                        $(".ajax_box4").append("<h3>" + msg4.documents[0].title + "</h3>");
+                        $(".ajax_box4").append("<h5>" + msg4.documents[0].authors[0] + "<h5>");
+                    });
+            </script>
+
             <div class="mini_ad">
                 <img src="img/main/ad_miniSize.png" alt="광고 이미지">
+                <p>
+                    <a>마우스를</a> 올려주세요
+                </p>
                 <div class="hidden_adImage">
                     <img src="img/main/ad_hiddenImage.png" alt="책 설명 이미지">
                     <a class="close1">X 닫기</a>
                 </div>
             </div>
+
 
             <script>
                 $(function(){
@@ -325,61 +401,138 @@
                 });
             </script>
 
-            <table id="best_sellerList">
+            <table id="selected_table">
                 <tr>
-                    <th>베스트 셀러</th>
+                    <th class="first_th">베스트 셀러</th>
                 </tr>
                 <tr>
                     <th class="table_menu1">오늘</th>
                     <th class="table_menu2">주간</th>
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td class="rank">1</td>
                     <td class="ranking">헤어질 결심 각본</td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td class="ranking">역행자</td>
-                </tr>
-                <tr>
-                    <td>3</td>
+                    <td class="rank">2</td>
                     <td class="ranking">파친코 1</td>
                 </tr>
                 <tr>
-                    <td>4</td>
-                    <td class="ranking">불편한 편의점(40만부 기념판)</td>
+                    <td class="rank">3</td>
+                    <td class="ranking">역행자</td>
                 </tr>
                 <tr>
-                    <td>5</td>
-                    <td class="ranking">말의 알고리즘</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td class="ranking">ETS 토익 정기시험 기출문제1</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td class="ranking">ETS 토익 정기시험 기출문제2</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td class="ranking">당신이라는 기적</td>
-                </tr>
-                <tr>
-                    <td>9</td>
+                    <td class="rank">4</td>
                     <td class="ranking">계속 가보겠습니다</td>
                 </tr>
                 <tr>
-                    <td>10</td>
-                    <td class="ranking">작별인사</td>
+                    <td class="rank">5</td>
+                    <td class="ranking">당신이라는 기적</td>
                 </tr>
-                
+                <tr>
+                    <td class="rank">6</td>
+                    <td class="ranking">잘 살아라 그게 최고의 복수다</td>
+                </tr>
+                <tr>
+                    <td class="rank">7</td>
+                    <td class="ranking">스베덴보리의 위대한 선물</td>
+                </tr>
+                <tr>
+                    <td class="rank">8</td>
+                    <td class="ranking">불편한 편의점(40만부 기념판)</td>
+                </tr>
+                <tr>
+                    <td class="rank">9</td>
+                    <td class="ranking">그릿(100쇄 기념 리커버 에디션)</td>
+                </tr>
+                <tr>
+                    <td class="rank">10</td>
+                    <td class="ranking">모멸감, 끝낸다고 끝이 아닌 관계</td>
+                </tr>
+
             </table>
+
+
+
+                <table id="hidden_table">
+                    <tr>
+                        <th class="first_th">베스트 셀러</th>
+                    </tr>
+                    <tr>
+                        <th class="table_menu1">오늘</th>
+                        <th class="table_menu2">주간</th>
+                    </tr>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="ranking">역행자</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="ranking">계속 가보겠습니다</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="ranking">유럽 도시 기행 2</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="ranking">불편한 편의점(40만부 기념판)</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="ranking">기분을 관리하면 인생이 관리된다</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="ranking">마법천자문 53: 결정을 내리다! 결단할 결</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="ranking">파친코 1</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">8</td>
+                        <td class="ranking">말의 알고리즘</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">9</td>
+                        <td class="ranking">헤어질 결심 각본</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">10</td>
+                        <td class="ranking">작별인사</td>
+                    </tr>
+                </table>
+
+                <script>
+                    $(function(){
+                        $('.table_menu1').click(function(){
+                            $('.selected_table').css("display", "block");
+                            $('.hidden_table').css("display", "none");
+                        });
+                        $('.table_menu2').click(function(){
+                            $('.selected_table').css("display", "none");
+                            $('.hidden_table').css("display", "block");
+                        });
+                    });
+                </script>
+                
+
 
         </div>
 
         <section>
-
+            <div id="ad_container">
+                <div class="ad_box1">
+                    <img src="img/main/ad_image2.jpg" alt="광고 이미지">
+                </div>
+                <div class="ad_box2">
+                    <img src="img/main/ad_image3.jpg" alt="광고 이미지">
+                </div>
+                <div class="ad_box3">
+                    <img src="img/main/ad_image4.jpg" alt="광고 이미지">
+                </div>
+            </div>
         </section>
 
         <footer>
