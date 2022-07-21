@@ -317,9 +317,6 @@
                 </div>
             </div>
 
-            <div>
-                <img src="img/main/ad_image5.png" alt="광고 이미지">
-            </div>
 
             <div id="recommend_slide">
                 <ul>
@@ -339,10 +336,26 @@
                 <img src="img/main/arrow_right.png" alt="화살표 이미지" class="right">
             </div>
 
-            <div id="ajax_container2">
-                <div class="ajax_box9">
-                </div>
+            <div class="ad_box4">
+                <img src="img/main/ad_image5.png" alt="광고 이미지">
             </div>
+
+            <div class="ad_box5">
+                <img src="img/main/ad_imageChange1.jpg" alt="광고 이미지" class="visible_ad">
+                <span class="ad_prev">
+                    <img src="img/main/prev_button.png" alt="이전 버튼">
+                </span>
+                <span class="ad_next">
+                    <img src="img/main/next_button.png" alt="다음 버튼">
+                </span>
+            </div>
+
+            <div class="ad_box6">
+                <img src="img/main/ad_image6.png" alt="광고 이미지">
+            </div>
+
+
+
 
             <p class="over_text1">더보기⏵</p>
 
@@ -356,22 +369,89 @@
         <script src="js/recommend_slide.js"></script>
 
         <script>
-                $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "나를 살게하는 것들" },
-                headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
-            })
-                .done(function(msg){
-                    $(".ajax_box9").append("<img src='" + msg.documents[0].thumbnail + "'/>");
-                    $(".ajax_box9").append("<h3>" + msg.documents[0].title + "</h3>");
-                    $(".ajax_box9").append("<h5>" + "아주 특별한 인생 강의" + "<h5>");
+            $(function(){
+                var num = 1;
+
+                function ChangeImage(ad){
+                    if(ad){
+                        if(num == 5)num = 0
+                        num++; 
+                    } else {
+                        if(num == 1)num = 6
+                        num--;
+                    }
+                    var Ad_Images = document.getElementsByClassName("visible_ad")[0]
+                    Ad_Images.setAttribute("src", "img/main/ad_imageChange" + num + ".jpg")
+                }
+
+                $(".ad_prev").click(function(){
+                    ChangeImage(0);
                 });
+
+                $(".ad_next").click(function(){
+                    ChangeImage(1);
+                });
+            });
         </script>
 
+
         <div id="section2">
-            <h3>출판사 초이스!</h3>
+            <h3>출판사 <a>초이스!</a></h3>
+            <h3 class="section2_subject1">미디어 <a>추천!</a></h3>
+            <h3 class="section2_subject2"><a>이 책</a> 어때?</h3>
+
+            <div id="book_container">
+                <div class="book_box1">
+                    <img src="img/main/ad_image7.jpg" alt="광고 이미지">
+                </div>
+                <div class="book_box2_wrap">
+                    <div class="book_box2">
+                    <ul>
+                        <li>
+                            <img src="img/main/ad_image8.jpg" alt="광고 이미지">
+                        </li>
+                        <li>
+                            <img src="img/main/ad_image9.jpg" alt="광고 이미지" class="hidden_adImage2">
+                        </li>
+                        <li>
+                            <img src="img/main/ad_image10.jpg" alt="광고 이미지" class="hidden_adImage3">
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="book_box3">
+                    <img src="img/main/ad_image11.jpg" alt="광고 이미지">
+                    <img src="img/main/ad_image12.jpg" alt="광고 이미지" class="hidden_adImage4">
+                </div>
+            </div>
+            
+
+            <div class="login_box">
+                <img src="img/main/login_image.png" alt="로그인 이미지">
+            </div>
         </div>
+
+        <script>
+            let slideIndex = 0;
+            showslideImage()
+            function showslideImage(){
+                let i;
+                let slides = document.getElementsByClassName("book_box2_wrap");
+                let dots = document.getElementsByClassName("dot");
+                for (i=0; i<slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length){slideIndex = 1;}
+                for (i=0; i<dots.length; i++){
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showslideImage, 4000);
+            }
+        </script>
+
 
         <footer>
 

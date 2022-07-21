@@ -101,7 +101,7 @@
         #select_menu li a.active::after { position: absolute; top: -20%; left: 0; content: ""; background-color: red; width: 100%; height: 4.5px;
                                           transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
         
-        #slider #selected_table { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.4%; }
+        #slider #selected_table { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.5%; }
         #selected_table .table_menu1 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; }
         #selected_table .table_menu2 { border: 2px solid #666; cursor: pointer; }
 
@@ -112,7 +112,7 @@
         #selected_table th { font-size: 14px; }
         #selected_table .first_th { width: 100px; }
 
-        #slider #hidden_table { display: none; background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.4%; }
+        #slider #hidden_table { display: none; background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.5%; }
         #hidden_table .table_menu1 { border: 2px solid #666; cursor: pointer; }
         #hidden_table .table_menu2 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; }
 
@@ -127,17 +127,17 @@
         #ajax_bookContainer1 h3 { width: 75%; }
 
 
-        section { width: 100%; height: 800px; position: relative; }
-        section #ad_container { width: 65%; height: 130px; margin: 0 auto; padding-top: 50px; display: flex; justify-content: space-around; }
+        section { width: 980px; height: 600px; margin: 0 auto; position: relative; }
+        section #ad_container { width: 100%; height: 130px; padding-top: 50px; display: flex; justify-content: space-around; margin: 0 auto; }
         #ad_container img { cursor: pointer; }
 
-        section #line_container { display: flex; width: 750px; margin: 0 auto; height: 50px; padding-top: 50px; font-family: 'GmarketSansMedium'; }
-        #line_container .bottom_line1, .bottom_line2 { width: 250px; height: 22px; border-bottom: 1px solid #333; }
-        #line_container p { font-size: 35px; }
+        section #line_container { display: flex; width: 640px; height: 50px; padding-top: 50px; font-family: 'GmarketSansMedium'; }
+        #line_container .bottom_line1, .bottom_line2 { width: 220px; height: 22px; border-bottom: 1px solid #333; }
+        #line_container p { font-size: 30px; }
         #line_container p a { color: red; }
 
 
-        #recommend_slide { width: 650px; height: 250px; overflow: hidden; position: absolute; top: 30%; left: 33%; border-bottom: 1px solid lightgray;  }
+        #recommend_slide { width: 640px; height: 250px; overflow: hidden; border-bottom: 1px solid lightgray; margin-top: 100px; }
         #recommend_slide p { background-color: gainsboro; font-size: 14px; text-align: center; }
         #recommend_slide img { width: 120px; height: 174px; }
         #recommend_slide div { width: 300px; font-family: 'Eulyoo1945-Regular'; }
@@ -145,12 +145,34 @@
         #recommend_slide ul { width: 2000px; height: 200px; }
         #recommend_slide ul li { width: 500px; height: 200px; float: left; display: flex; justify-content: space-around;  }
 
-        section .left { position: absolute; top: 38%; left: 29%; cursor: pointer; }
+        section .left { position: absolute; top: 38%; left: -5%; cursor: pointer; }
         section .right { position: absolute; top: 38%; right: 27%; cursor: pointer; }
 
-        section #ajax_container2 { width: 200px; height: 250px; background-color: gainsboro; position: absolute; top: 25%; left: 75%; font-family: 'Eulyoo1945-Regular'; }
+        section .ad_box4 { width: 219px; height: 332px; background-color: gainsboro; position: absolute; top: 25%; right: 0%; border-top: 1px solid #333;; }
 
-        section .over_text1 { cursor: pointer; font-size: 13px; position: absolute; top: 22%; right: 35% }
-        section .over_text2 { font-size: 13px; position: absolute; top: 22%; right: 20%; }
+        section .over_text1 { cursor: pointer; font-size: 13px; position: absolute; top: 30%; right: 37% }
+        section .over_text2 { font-size: 13px; position: absolute; top: 22%; right: 12.5%; }
+
+        section .ad_box5 { width: 92px; height: 200px; border: 1px solid lightgray; position: absolute; top: 35%; left: -22%; }
+        .ad_box5 .ad_prev, .ad_next { width: 30px; height: 30px; cursor: pointer; }
+
+        section .ad_box6 { width: 80px; height: 130px; position: absolute; top: 70%; left: -22%; cursor: pointer;  }
         
-        #section2 { width: 60%; height: 800px; margin: 0 auto; }
+        #section2 { width: 980px; height: 600px; margin: 0 auto; position: relative; }
+        #section2 h3 a { color: red; }
+        #section2 h3 { font-family: 'GmarketSansMedium'; }
+
+        #section2 #book_container { width: 100%; height: 350px; display: flex; justify-content: center; }
+        #book_container .book_box1, .book_box2_wrap { width: 37.5%; height: 100%; border: 1px solid lightgray; }
+        #book_container .book_box3 { width: 25%; height: 100%; border: 1px solid lightgray; }
+
+        .book_box2_wrap { overflow: hidden; position: relative; }
+        .book_box2_wrap .book_box2 { width: 1000px; height: 100%; position: absolute; top: 0; left: 0; }
+        
+
+        #book_container .hidden_adImage2, .hidden_adImage3, .hidden_adImage4 { display: none; }
+        
+        #section2 .section2_subject1 { position: absolute; top: 0; left: 38%; }
+        #section2 .section2_subject2 { position: absolute; top: 0; right: 13%; }
+
+        #section2 .login_box { width: 100%; height: 145px; padding-top: 10px; }
