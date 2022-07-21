@@ -158,21 +158,37 @@
 
         section .ad_box6 { width: 80px; height: 130px; position: absolute; top: 70%; left: -22%; cursor: pointer;  }
         
-        #section2 { width: 980px; height: 600px; margin: 0 auto; position: relative; }
+        #section2 { width: 980px; height: 550px; margin: 0 auto; position: relative; display: flex; flex-wrap: wrap; }
         #section2 h3 a { color: red; }
         #section2 h3 { font-family: 'GmarketSansMedium'; }
 
-        #section2 #book_container { width: 100%; height: 350px; display: flex; justify-content: center; }
-        #book_container .book_box1, .book_box2_wrap { width: 37.5%; height: 100%; border: 1px solid lightgray; }
-        #book_container .book_box3 { width: 25%; height: 100%; border: 1px solid lightgray; }
+        #section2 #book_container1 { width: 37.5%; height: 350px; display: flex; flex-wrap: wrap; }
+        #section2 #book_container2 { width: 37.5%; height: 350px; display: flex; flex-wrap: wrap; }
+        #section2 #book_container3 { width: 25%; height: 350px; display: flex; flex-wrap: wrap; }
+        #section2 .book_box1, .book_box2, .book_box3 { width: 100%; height: 100%; border: 1px solid lightgray; }
 
-        .book_box2_wrap { overflow: hidden; position: relative; }
-        .book_box2_wrap .book_box2 { width: 1000px; height: 100%; position: absolute; top: 0; left: 0; }
-        
+        #book_container .book_box2, .book_box3 { display: none; text-align: center; }
 
-        #book_container .hidden_adImage2, .hidden_adImage3, .hidden_adImage4 { display: none; }
+        #section2 #dot_container { position: absolute; top: 6%; left: 53% }
+        .dot { cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; 
+               transition: background-color 0.5s ease; }
+
+        #section2 #dot_container2 { position: absolute; top: 6%; left: 80% }
+        .dot2 { cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; 
+                      transition: background-color 0.5s ease; }
+
+        .active_dot { background-color: skyblue; }
         
         #section2 .section2_subject1 { position: absolute; top: 0; left: 38%; }
         #section2 .section2_subject2 { position: absolute; top: 0; right: 13%; }
 
-        #section2 .login_box { width: 100%; height: 145px; padding-top: 10px; }
+        #section2 .login_box { width: 100%; height: 145px; padding-top: 10px; cursor: pointer; }
+
+        #section3 { width: 980px; height: 600px; margin: 0 auto; }
+        #section3 #line_container2 { width: 100%; height: 25px; display: flex;}
+        #line_container2 .bottom_line3, .bottom_line4 { width: 400px; height: 25px; border-bottom: 1px solid #333; }
+        #line_container2 p { font-size: 30px; font-family: 'GmarketSansMedium'; }
+        #line_container2 p a { color: red; }
+
+        #section3 #section3_menu { width: 100%; height: 50px; margin-top: 50px; display: flex; justify-content: space-around; border-bottom: 1px solid lightgray; }
+        #section3_menu li { float: left; cursor: pointer; }

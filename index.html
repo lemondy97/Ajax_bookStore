@@ -396,61 +396,73 @@
 
 
         <div id="section2">
-            <h3>출판사 <a>초이스!</a></h3>
-            <h3 class="section2_subject1">미디어 <a>추천!</a></h3>
-            <h3 class="section2_subject2"><a>이 책</a> 어때?</h3>
-
-            <div id="book_container">
+            <div id="book_container1">
+                <h3>출판사 <a>초이스!</a></h3>
                 <div class="book_box1">
                     <img src="img/main/ad_image7.jpg" alt="광고 이미지">
                 </div>
-                <div class="book_box2_wrap">
-                    <div class="book_box2">
-                    <ul>
-                        <li>
-                            <img src="img/main/ad_image8.jpg" alt="광고 이미지">
-                        </li>
-                        <li>
-                            <img src="img/main/ad_image9.jpg" alt="광고 이미지" class="hidden_adImage2">
-                        </li>
-                        <li>
-                            <img src="img/main/ad_image10.jpg" alt="광고 이미지" class="hidden_adImage3">
-                        </li>
-                    </ul>
-                    </div>
+            </div>
+            <div id="book_container2">
+                <h3>미디어 <a>추천!</a></h3>
+                <div class="book_box2">
+                    <img src="img/main/ad_image8.jpg" alt="광고 이미지">
                 </div>
-                <div class="book_box3">
-                    <img src="img/main/ad_image11.jpg" alt="광고 이미지">
-                    <img src="img/main/ad_image12.jpg" alt="광고 이미지" class="hidden_adImage4">
+                <div class="book_box2">
+                    <img src="img/main/ad_image9.jpg" alt="광고 이미지">
+                </div>
+                <div class="book_box2">
+                    <img src="img/main/ad_image10.jpg" alt="광고 이미지">
                 </div>
             </div>
-            
+            <div id="book_container3">
+                <h3>이 책 <a>어때?</a></h3>
+                <div class="book_box3">
+                    <img src="img/main/ad_image11.jpg" alt="광고 이미지">
+                </div>
+                <div class="book_box3">
+                    <img src="img/main/ad_image12.jpg" alt="광고 이미지">
+                </div>
+            </div>
+
+            <div id="dot_container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div id="dot_container2">
+                <span class="dot2" onclick="currentSlide(1)"></span>
+                <span class="dot2" onclick="currentSlide(2)"></span>
+            </div>
 
             <div class="login_box">
                 <img src="img/main/login_image.png" alt="로그인 이미지">
             </div>
         </div>
 
-        <script>
-            let slideIndex = 0;
-            showslideImage()
-            function showslideImage(){
-                let i;
-                let slides = document.getElementsByClassName("book_box2_wrap");
-                let dots = document.getElementsByClassName("dot");
-                for (i=0; i<slides.length; i++){
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length){slideIndex = 1;}
-                for (i=0; i<dots.length; i++){
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-                setTimeout(showslideImage, 4000);
-            }
-        </script>
+        <script src="js/dot_RotatingImage.js"></script>
+
+        <script src="js/dot_Clickimage.js"></script>
+
+        <div id="section3">
+            <div id="line_container2">
+                <div class="bottom_line3">
+                </div>
+                <p>분야별 <a>추천</a></p>
+                <div class="bottom_line4">
+                </div>
+            </div>
+            
+            <ul id="section3_menu">
+                <li>문학</li>
+                <li>인문/교양</li>
+                <li>경제/실용</li>
+                <li>유아/아동</li>
+                <li>학습/어학</li>
+                <li>외국도서</li>
+                <li>CD/DVD</li>
+            </ul>
+        </div>
 
 
         <footer>
