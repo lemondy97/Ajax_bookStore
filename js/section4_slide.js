@@ -1,23 +1,25 @@
             $(function(){
+                var ul_width = $("#ul_wrap ul").width();
+
                 function slideBook(){
-                    $("#book_slideContainer > ul").stop().animate({marginLeft: -800}, function(){
-                        $("#book_slideContainer > ul > li:first").appendTo("#book_slideContainer > ul");
-                        $("#book_slideContainer > ul").css({marginLeft: 0})
+                    $("#ul_wrap").stop().animate({marginLeft: -ul_width}, function(){
+                        $("#ul_wrap > ul:first").appendTo("#ul_wrap");
+                        $("#ul_wrap").css({marginLeft: 0})
                     });
                 }
                 setInterval(slideBook, 3000);
-            });
+            
 
             function prev(){
-                $("#book_slideContainer > ul > li:last").prependTo("#book_slideContainer > ul");
-                $("#book_slideContainer > ul").css({marginLeft: -500})
-                $("#book_slideContainer > ul").stop().animate({marginLeft: 0}, 500);
+                $("#ul_wrap > ul:last").prependTo("#ul_wrap");
+                $("#ul_wrap").css({marginLeft: -ul_width});
+                $("#ul_wrap").stop().animate({marginLeft: 0}, 500);
             }
 
             function next(){
-                $("#book_slideContainer > ul").stop().animate({marginLeft: -800}, function(){
-                    $("#book_slideContainer > ul > li:first").appendTo("#book_slideContainer > ul");
-                    $("#book_slideContainer > ul").css({marginLeft: 0});
+                $("#ul_wrap").stop().animate({marginLeft: -ul_width}, function(){
+                    $("#ul_wrap > ul:first").appendTo("#ul_wrap");
+                    $("#ul_wrap").css({marginLeft: 0})
                 });
             }
 
@@ -28,3 +30,5 @@
             $(".section4_right").click(function(){
                 next();
             });
+
+        });

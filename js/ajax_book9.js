@@ -55,18 +55,18 @@
                 });
 
                 $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "퀸텀 라이프" },
-                headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
-            })
-                .done(function(msg5){
-                    $(".ajax_box13").append("<img src='" + msg5.documents[0].thumbnail + "'/>");
-                    $(".ajax_box13").append("<div>");
-                    $(".ajax_box13 div").append("<img src='" + "img/main/star.png" + "'/>");
-                    $(".ajax_box13 div").append("<h3>" + msg5.documents[0].title + "</h3>");
-                    $(".ajax_box13 div").append("<p>" + "<a>" + "-18000원 " + "</a>" + " 16,200원" + "</p>");
-                });
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: "퀀텀 라이프" },
+                    headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
+                })
+                    .done(function(msg5){
+                        $(".ajax_box13").append("<img src='" + msg5.documents[0].thumbnail + "'/>");
+                        $(".ajax_box13").append("<div>");
+                        $(".ajax_box13 div").append("<img src='" + "img/main/star.png" + "'/>");
+                        $(".ajax_box13 div").append("<h3>" + msg5.documents[0].title + "</h3>");
+                        $(".ajax_box13 div").append("<p>" + "<a>" + "-13000원 " + "</a>" + " 11,700원" + "</p>");
+                    });
 
                 $.ajax({
                 method: "GET",
