@@ -146,7 +146,7 @@
         #line_container p a { color: red; }
 
 
-        #recommend_slide { width: 640px; height: 250px; overflow: hidden; border-bottom: 1px solid lightgray; margin-top: 100px; }
+        #recommend_slide { width: 640px; height: 250px; overflow: hidden; border-bottom: 1px solid lightgray; margin-top: 100px; margin-left: 30px; }
         #recommend_slide p { background-color: gainsboro; font-size: 14px; text-align: center; }
         #recommend_slide img { width: 120px; height: 174px; }
         #recommend_slide div { width: 300px; font-family: 'Eulyoo1945-Regular'; }
@@ -154,8 +154,8 @@
         #recommend_slide ul { width: 2000px; height: 200px; }
         #recommend_slide ul li { width: 500px; height: 200px; float: left; display: flex; justify-content: space-around;  }
 
-        section .left { position: absolute; top: 38%; left: -5%; cursor: pointer; }
-        section .right { position: absolute; top: 38%; right: 27%; cursor: pointer; }
+        section .left { position: absolute; top: 58%; left: 0; cursor: pointer; }
+        section .right { position: absolute; top: 58%; right: 27%; cursor: pointer; }
 
         section .ad_box4 { width: 219px; height: 332px; background-color: gainsboro; position: absolute; top: 25%; right: 0%; border-top: 1px solid #333;; }
 
@@ -205,20 +205,38 @@
         #section3_menu li a.active2::after { position: absolute; bottom: 0; left: 0; content: ""; background-color: #ef544d; width: 100%; height: 4.5px;
             transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
         
-        #section3 #book_container4 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #section3 #book_container4 { width: 100%; height: 250px; margin-top: 50px; display: flex; justify-content: space-between; }
         #book_container4 .Ajax_boxes1, .Ajax_boxes2, .Ajax_boxes3, .Ajax_boxes4, .Ajax_boxes5, .Ajax_boxes6 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
 
-        #section3 #book_container5 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #section3 #book_container5 { width: 100%; height: 250px; margin-top: 50px; display: flex; justify-content: space-between; }
         #book_container5 .Ajax_boxes7, .Ajax_boxes8, .Ajax_boxes9, .Ajax_boxes10, .Ajax_boxes11, .Ajax_boxes12 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
 
-        #section3 #book_container6 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #section3 #book_container6 { width: 100%; height: 250px; margin-top: 50px; display: flex; justify-content: space-between; }
         #book_container6 .Ajax_boxes13, .Ajax_boxes14, .Ajax_boxes15, .Ajax_boxes16, .Ajax_boxes17, .Ajax_boxes18 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
 
-        #section3 #book_container7 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #section3 #book_container7 { width: 100%; height: 250px; margin-top: 50px; display: flex; justify-content: space-between; }
         #book_container7 .Ajax_boxes19, .Ajax_boxes20, .Ajax_boxes21, .Ajax_boxes22, .Ajax_boxes23, .Ajax_boxes24 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
 
-        #section3 #book_container8 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #section3 #book_container8 { width: 100%; height: 250px; margin-top: 50px; display: flex; justify-content: space-between; }
         #book_container8 .Ajax_boxes25, .Ajax_boxes26, .Ajax_boxes27, .Ajax_boxes28, .Ajax_boxes29, .Ajax_boxes30 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
 
-        #section3 #book_container9 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #section3 #book_container9 { width: 100%; height: 250px; margin-top: 50px; display: flex; justify-content: space-between; }
         #book_container9 .Ajax_boxes31, .Ajax_boxes32, .Ajax_boxes33, .Ajax_boxes34, .Ajax_boxes35, .Ajax_boxes36 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
+
+
+        #section3 .ad_box7 { width: 880px; height: 80px; margin: 0 auto; cursor: pointer; }
+
+        #section4 { width: 980px; height: 800px; margin: 0 auto; position: relative; }
+        #section4 h3 { font-family: 'GmarketSansMedium'; }
+        #section4 h3 a { color: red; }
+        #section4 .section4_left { position: absolute; top: 0; left: 15%; }
+        #section4 .section4_right { position: absolute; top: 0; left: 20%; }
+
+        #section4 #book_slideContainer { width: 500px; height: 400px; overflow: hidden; border-top: 1px solid #333; margin-top: 25px; }
+        #book_slideContainer ul { width: 1600px; height: 100%; };
+        #book_slideContainer ul li { width: 400px; height: 100%; float: left; display: flex; justify-content: space-between; }
+        #book_slideContainer p { text-align: center; }
+        #book_slideContainer p a { color: rgb(200, 200, 200); text-decoration: line-through; }
+        #book_slideContainer h3 { font-family: 'Eulyoo1945-Regular'; }
+        #book_slideContainer div { width: 300px; font-family: 'Eulyoo1945-Regular'; }
+        #book_slideContainer div img { width: 91px; height: 24px; }
