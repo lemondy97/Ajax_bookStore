@@ -9,7 +9,7 @@
                     $(".ajax_box9").append("<div>");
                     $(".ajax_box9 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box9 div").append("<h3>" + msg.documents[0].title + "</h3>");
-                    $(".ajax_box9 div").append("<p>" + "<a>" + "-19000원" + "</a>" + "17,100원" + "</p>");
+                    $(".ajax_box9 div").append("<p>" + "<a>" + "-19000원 " + "</a>" + " 17,100원" + "</p>");
                 });
 
                 $.ajax({
@@ -23,7 +23,7 @@
                     $(".ajax_box10").append("<div>");
                     $(".ajax_box10 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box10 div").append("<h3>" + msg2.documents[0].title + "</h3>");
-                    $(".ajax_box10 div").append("<p>" + "<a>" + "-16000원" + "</a>" + "14,400원" + "</p>");
+                    $(".ajax_box10 div").append("<p>" + "<a>" + "-16000원 " + "</a>" + " 14,400원" + "</p>");
                 });
 
                 $.ajax({
@@ -37,7 +37,7 @@
                     $(".ajax_box11").append("<div>");
                     $(".ajax_box11 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box11 div").append("<h3>" + msg3.documents[0].title + "</h3>");
-                    $(".ajax_box11 div").append("<p>" + "<a>" + "-17500원" + "</a>" + "15,750원" + "</p>");
+                    $(".ajax_box11 div").append("<p>" + "<a>" + "-17500원 " + "</a>" + " 15,750원" + "</p>");
                 });
 
                 $.ajax({
@@ -51,7 +51,7 @@
                     $(".ajax_box12").append("<div>");
                     $(".ajax_box12 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box12 div").append("<h3>" + msg4.documents[0].title + "</h3>");
-                    $(".ajax_box12 div").append("<p>" + "<a>" + "-13000원" + "</a>" + "11,700원" + "</p>");
+                    $(".ajax_box12 div").append("<p>" + "<a>" + "-13000원 " + "</a>" + " 11,700원" + "</p>");
                 });
 
                 $.ajax({
@@ -65,7 +65,7 @@
                     $(".ajax_box13").append("<div>");
                     $(".ajax_box13 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box13 div").append("<h3>" + msg5.documents[0].title + "</h3>");
-                    $(".ajax_box13 div").append("<p>" + "<a>" + "-18000원" + "</a>" + "16,200원" + "</p>");
+                    $(".ajax_box13 div").append("<p>" + "<a>" + "-18000원 " + "</a>" + " 16,200원" + "</p>");
                 });
 
                 $.ajax({
@@ -79,7 +79,7 @@
                     $(".ajax_box14").append("<div>");
                     $(".ajax_box14 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box14 div").append("<h3>" + msg6.documents[0].title + "</h3>");
-                    $(".ajax_box14 div").append("<p>" + "<a>" + "-14800원" + "</a>" + "13,320원" + "</p>");
+                    $(".ajax_box14 div").append("<p>" + "<a>" + "-14800원 " + "</a>" + " 13,320원" + "</p>");
                 });
 
                 $.ajax({
@@ -93,7 +93,7 @@
                     $(".ajax_box15").append("<div>");
                     $(".ajax_box15 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box15 div").append("<h3>" + msg7.documents[0].title + "</h3>");
-                    $(".ajax_box15 div").append("<p>" + "<a>" + "-17000원" + "</a>" + "15,300원" + "</p>");
+                    $(".ajax_box15 div").append("<p>" + "<a>" + "-17000원 " + "</a>" + " 15,300원" + "</p>");
                 });
 
                 $.ajax({
@@ -107,5 +107,5 @@
                     $(".ajax_box16").append("<div>");
                     $(".ajax_box16 div").append("<img src='" + "img/main/star.png" + "'/>");
                     $(".ajax_box16 div").append("<h3>" + msg8.documents[0].title + "</h3>");
-                    $(".ajax_box16 div").append("<p>" + "<a>" + "-16000원" + "</a>" + "14,400원" + "</p>");
+                    $(".ajax_box16 div").append("<p>" + "<a>" + "-16000원 " + "</a>" + " 14,400원" + "</p>");
                 });

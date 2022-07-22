@@ -232,9 +232,9 @@
         #section4 .section4_left { position: absolute; top: 0; left: 15%; }
         #section4 .section4_right { position: absolute; top: 0; left: 20%; }
 
-        #section4 #book_slideContainer { width: 500px; height: 400px; overflow: hidden; border-top: 1px solid #333; margin-top: 25px; }
+        #section4 #book_slideContainer { width: 500px; height: 400px; border-top: 1px solid #333; margin-top: 25px; }
         #book_slideContainer ul { width: 1600px; height: 100%; };
-        #book_slideContainer ul li { width: 400px; height: 100%; float: left; display: flex; justify-content: space-between; }
+        #book_slideContainer .li { width: 400px; height: 100%; display: flex; justify-content: space-between; float: left; }
         #book_slideContainer p { text-align: center; }
         #book_slideContainer p a { color: rgb(200, 200, 200); text-decoration: line-through; }
         #book_slideContainer h3 { font-family: 'Eulyoo1945-Regular'; }
