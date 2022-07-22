@@ -1,7 +1,7 @@
             $.ajax({
                 method: "GET",
                 url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "파친코" },
+                data: { query: "파친코1" },
                 headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
             })
                 .done(function(msg){

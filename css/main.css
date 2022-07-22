@@ -28,6 +28,13 @@
             font-style: normal;
         }
 
+        @font-face {
+            font-family: 'LotteMartHappy';
+            font-style: normal;
+            font-weight: 400;
+            src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+          }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         li, ul, ol { list-style: none; }
         a { text-decoration: none; }
@@ -85,7 +92,7 @@
         #slider #select_container { width: 100%; height: 40px; background-color: #f7f7f7; position: relative; }
         #select_container #select_menu { width: 40%; height: 40px; position: absolute; top: 0; left: 30%; }
         #select_menu li { width: 25%; float: left; cursor: pointer; }
-        #select_menu li a { font-family: 'GmarketSansMedium'; }
+        #select_menu li a { font-family: 'LotteMartHappy'; }
         
         #slider .mini_ad { width: 60px; height: 90px; position: absolute; top: 5%;  left: 15%;}
         .mini_ad .hidden_adImage { display: none; width: 980px; height: 363px; position: relative; }
@@ -98,7 +105,7 @@
         
         #slider #select_menu li a { position: relative; transition: 0.5s; }
 
-        #select_menu li a.active::after { position: absolute; top: -20%; left: 0; content: ""; background-color: red; width: 100%; height: 4.5px;
+        #select_menu li a.active::after { position: absolute; top: -20%; left: 0; content: ""; background-color: #ef544d; width: 100%; height: 4.5px;
                                           transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
         
         #slider #selected_table { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.5%; }
@@ -108,7 +115,7 @@
         #selected_table .rank { width: 20%; }
         #selected_table .ranking { width: 80%; }
         #selected_table .ranking:hover { text-decoration: underline; cursor: pointer; }
-        #selected_table td { font-family: 'Eulyoo1945-Regular'; font-size: 12px; }
+        #selected_table td { font-family: 'LotteMartHappy'; font-size: 12px; }
         #selected_table th { font-size: 14px; }
         #selected_table .first_th { width: 100px; }
 
@@ -119,12 +126,14 @@
         #hidden_table .rank { width: 20%; }
         #hidden_table .ranking { width: 80%; }
         #hidden_table .ranking:hover { text-decoration: underline; cursor: pointer; }
-        #hidden_table td { font-family: 'Eulyoo1945-Regular'; font-size: 12px; }
+        #hidden_table td { font-family: 'LotteMartHappy'; font-size: 12px; }
         #hidden_table th { font-size: 14px; }
         #hidden_table .first_th { width: 100px; }
 
         #slider #ajax_bookContainer1 { width: 760px; height: 316px; display: flex; justify-content: space-around; position: absolute; top:0; left: 30%; }
         #ajax_bookContainer1 h3 { width: 75%; }
+
+        #ajax_bookContainer1 .ajax_box1, .ajax_box2, .ajax_box3, .ajax_box4 { width: 25%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; }
 
 
         section { width: 980px; height: 600px; margin: 0 auto; position: relative; }
@@ -191,4 +200,25 @@
         #line_container2 p a { color: red; }
 
         #section3 #section3_menu { width: 100%; height: 50px; margin-top: 50px; display: flex; justify-content: space-around; border-bottom: 1px solid lightgray; }
-        #section3_menu li { float: left; cursor: pointer; }
+        #section3_menu li { float: left; cursor: pointer; font-family: 'LotteMartHappy'; position: relative; padding: 0 20px; }
+
+        #section3_menu li a.active2::after { position: absolute; bottom: 0; left: 0; content: ""; background-color: #ef544d; width: 100%; height: 4.5px;
+            transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
+        
+        #section3 #book_container4 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #book_container4 .Ajax_boxes1, .Ajax_boxes2, .Ajax_boxes3, .Ajax_boxes4, .Ajax_boxes5, .Ajax_boxes6 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
+
+        #section3 #book_container5 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #book_container5 .Ajax_boxes7, .Ajax_boxes8, .Ajax_boxes9, .Ajax_boxes10, .Ajax_boxes11, .Ajax_boxes12 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
+
+        #section3 #book_container6 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #book_container6 .Ajax_boxes13, .Ajax_boxes14, .Ajax_boxes15, .Ajax_boxes16, .Ajax_boxes17, .Ajax_boxes18 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
+
+        #section3 #book_container7 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #book_container7 .Ajax_boxes19, .Ajax_boxes20, .Ajax_boxes21, .Ajax_boxes22, .Ajax_boxes23, .Ajax_boxes24 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
+
+        #section3 #book_container8 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #book_container8 .Ajax_boxes25, .Ajax_boxes26, .Ajax_boxes27, .Ajax_boxes28, .Ajax_boxes29, .Ajax_boxes30 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
+
+        #section3 #book_container9 { width: 100%; height: 200px; margin-top: 50px; display: flex; justify-content: space-between; }
+        #book_container9 .Ajax_boxes31, .Ajax_boxes32, .Ajax_boxes33, .Ajax_boxes34, .Ajax_boxes35, .Ajax_boxes36 { width: 16.5%; height: 100%; margin: 0 auto; font-family: 'Eulyoo1945-Regular'; text-align: center; cursor: pointer; }
