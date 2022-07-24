@@ -25,7 +25,7 @@
             </div>
         </div>
 
-    
+  
 
         <header>
             
@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <div id="ad_container">
+            <div id="ad_container1">
                 <div class="ad_box">
                     <img src="img/main/ad_image1.jpg" alt="광고 이미지">
                 </div>
@@ -294,7 +294,7 @@
         </script>
 
         <section>
-            <div id="ad_container">
+            <div id="ad_container2">
                 <div class="ad_box1">
                     <img src="img/main/ad_image2.jpg" alt="광고 이미지">
                 </div>
@@ -558,24 +558,249 @@
                 <img src="img/main/arrow_left.png" alt="화살표 이미지" class="section4_left">
                 <img src="img/main/arrow_right.png" alt="화살표 이미지" class="section4_right">
             </div>
+
+            <div id="sale_container">
+                <ul id="sale_menu">
+                    <li class="SaleMenu1">특가할인</li>
+                    <li class="SaleMenu2">정가인하</li>
+                </ul>
+                <div id="product_container1">
+                    <div class="product_box1">
+                        <img src="img/main/product1.jpg" alt="상품 이미지">
+                        <h5>핑크퐁 말문트기 펜</h5>
+                        <p>정가 100,000원</p>
+                        <p>65,000원</p>
+                    </div>
+                    <div class="product_box2">
+                        <img src="img/main/product2.jpg" alt="상품 이미지">
+                        <h5>핑크퐁 아기상어드럼</h5>
+                        <p>정가 60,000원</p>
+                        <p>42,600원</p>
+                    </div>
+                    <div class="product_box3">
+                        <img src="img/main/product3.jpg" alt="상품 이미지">
+                        <h5>핑크퐁 상어가족 마이크</h5>
+                        <p>정가 20,000원</p>
+                        <p>14,800원</p>
+                    </div>
+                    <div class="product_box4">
+                        <img src="img/main/product4.jpg" alt="상품 이미지">
+                        <h5>핑크퐁 상어가족 영어동요 마이크</h5>
+                        <p>정가 20,000원</p>
+                        <p>14,800원</p>
+                    </div>
+                </div>
+
+
+                <div id="product_container2">
+                    <div class="product_box5">
+                        <img src="img/main/product5.jpg" alt="상품 이미지">
+                        <h5>설민석의 세계사 대모험(1~10권)</h5>
+                        <p>정가 99,000원</p>
+                        <p>89,100원</p>
+                    </div>
+                    <div class="product_box6">
+                        <img src="img/main/product6.jpg" alt="상품 이미지">
+                        <h5>설민석의 한국사 대모험(1~10권)</h5>
+                        <p>정가 88,000원</p>
+                        <p>79,200원</p>
+                    </div>
+                    <div class="product_box7">
+                        <img src="img/main/product7.jpg" alt="상품 이미지">
+                        <h5>who? 인물 사이언스(1~10권)</h5>
+                        <p>정가 110,000원</p>
+                        <p>99,000원</p>
+                    </div>
+                    <div class="product_box8">
+                        <img src="img/main/product8.jpg" alt="상품 이미지">
+                        <h5>Go Go 카카오프렌즈</h5>
+                        <p>정가 99,000원</p>
+                        <p>89,100원</p>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
 
         <script src="js/ajax_book9.js"></script>
 
         <script src="js/section4_slide.js"></script>
         
-            <ul id="sale_menu">
-                <li>특가할인</li>
-                <li>정가인하</li>
-            </ul>
+        <script>
+            $(function(){
+                $('#product_container2').hide();
+
+                $('.SaleMenu1').click(function(){
+                    $('#product_container2').hide();
+                    $('#product_container1').show();
+                });
+                $('.SaleMenu2').click(function(){
+                    $('#product_container1').hide();
+                    $('#product_container2').show();
+                });
+            });
+        </script>
+
+        <div id="section5">
+            <div id="CD_container">
+                <h4>CD</h4>
+                <div class="CD_box1">
+                    <img src="img/main/CD_image1.jpg" alt="CD 앨범">
+                    <p>방탄소년단(BTS) - Proof (Standard Edition) [3CD]</p>
+                    <p><a>67,800</a> 54,900원 +550P</p>
+                </div>
+                <div class="CD_box2">
+                    <ul>
+                        <li>
+                            <img src="img/main/CD_image2.jpg" alt="CD 앨범">
+                            <p>엔시티 드림(NCT DREAM) - 정규앨범2집 리패키지</p>
+                        </li>
+                        <li>
+                            <img src="img/main/CD_image3.jpg" alt="CD 앨범">
+                            <p>강다니엘 - 1st Full Album [The Story]</p>
+                        </li>
+                    </ul>
+                </div>
+                <span class="section5_left">
+                    <img src="img/main/arrow_left.png" alt="왼쪽 화살표" >
+                </span>
+                <span class="section5_right">
+                    <img src="img/main/arrow_right.png" alt="오른쪽 화살표">
+                </span>
+            </div>
+
+            <div id="DVD_container">
+                <h4>DVD</h4>
+                <div class="DVD_box1">
+                    <img src="img/main/DVD_image1.jpg" alt="CD 앨범">
+                    <p>헬렌:내 영혼의 자화상 - DVD</p>
+                    <p><a>25,300</a> 23,500원 +240P</p>
+                </div>
+                <div class="DVD_box2">
+                    <ul>
+                        <li>
+                            <img src="img/main/DVD_image2.jpg" alt="CD 앨범">
+                            <p>스탠리 큐브릭 4필름 콜렉션</p>
+                        </li>
+                        <li>
+                            <img src="img/main/DVD_image3.jpg" alt="CD 앨범">
+                            <p>진격의 거인 1기 TV시리즈</p>
+                        </li>
+                    </ul>
+                </div>
+                <span class="section5_left">
+                    <img src="img/main/arrow_left.png" alt="왼쪽 화살표" >
+                </span>
+                <span class="section5_right">
+                    <img src="img/main/arrow_right.png" alt="오른쪽 화살표">
+                </span>
+            </div>
+
+            <div id="ED_container">
+                <h4>특별판 Special Ed.</h4>
+                <img src="img/main/ED_image1.jpg" alt="스페셜 에디션" class="ED_Images">
+                <span class="section5_left" onclick="left_button();">
+                    <img src="img/main/arrow_left.png" alt="왼쪽 화살표" >
+                </span>
+                <span class="section5_right" onclick="right_button();">
+                    <img src="img/main/arrow_right.png" alt="오른쪽 화살표">
+                </span>
+            </div>
+
+
         </div>
 
-        <div id="product_fade">
-            
+        <script>
+            let ED_Img = document.querySelector(".ED_Images")
+            let Image_List = ["img/main/ED_image1.jpg", "img/main/ED_image2.jpg", "img/main/ED_image3.jpg", "img/main/ED_image4.jpg", "img/main/ED_image5.jpg" ];
+            let i = 0;
+        
+            function left_button(){
+                i--;
+                ED_Img.src = Image_List[i];
+                if(i < 0){
+                    i = Image_List.length-1;
+                    ED_Img.src = Image_List[i];
+                }
+            }
+
+            function right_button(){
+                i++;
+                ED_Img.src = Image_List[i];
+                if(i >= Image_List.length){
+                    i = 0;
+                    ED_Img.src = Image_List[i];
+                }
+            }
+
+        </script>
+
+        <div id="section6">
+            <div id="ad_container3">
+                <div class="ad_box8">
+                    <img src="img/main/ad_image14.jpg" alt="광고 이미지">
+                </div>
+                <div class="ad_box9">
+                    <img src="img/main/ad_image15.jpg" alt="광고 이미지">
+                </div>
+                <div class="ad_box10">
+                    <img src="img/main/ad_image16.jpg" alt="광고 이미지">
+                </div>
+            </div>
+
+            <h3>서비스 & 혜택</h3>
+            <div id="service_container">
+                <ul>
+                    <li class="service_subject">알뜰구매 혜택</li>
+                    <li class="service_li">LPOINT 100% 무제한 사용</li>
+                    <li class="service_li">OK캐쉬백포인트 100% 무제한 사용</li>
+                    <li class="service_li">북피니언롯데카드 최대30%청구할인</li>
+                </ul>
+                <ul>
+                    <li class="service_subject">핵심서비스</li>
+                    <li class="service_li">인터파크 Global</li>
+                </ul>
+                <ul>
+                    <li class="service_subject">안심배송서비스</li>
+                    <li class="service_li">해외주문배송 서비스</li>
+                    <li class="service_li">안심번호 서비스</li>
+                </ul>
+                <ul>
+                    <li class="service_subject">고객센터</li>
+                    <li class="service_li">일반문의 &emsp;&emsp; 1577-2555</li>
+                    <li class="service_li">ebook 문의 &emsp;&emsp; 1588-2547</li>
+                    <li class="service_li">월 ~금(09:00~18:00), 토요일, 일요일, 공휴일 휴무</li> 
+                </ul>
+            </div>
         </div>
+
+        <div id="coupon_line">
+
+        </div>
+
+
 
         <footer>
+            <ul id="footer_FirstMenu">
+                <li>개인정보처리방침 |</li>
+                <li>&nbsp;청소년보호정책 |</li>
+                <li>&nbsp;이용약관 |</li>
+                <li>&nbsp;IR |</li>
+                <li>&nbsp;회사소개 |</li>
+                <li>&nbsp;채용공고 |</li>
+                <li>&nbsp;우수고객제도 |</li>
+                <li>&nbsp;수익배분프로그램 |</li>
+                <li>&nbsp;광고안내 |</li>
+                <li>&nbsp;담당자안내 |</li>
+                <li>&nbsp;판매자매니저</li>
+            </ul>
 
+            <div id="footer_container">
+                <ul>
+                    
+                </ul>
+            </div>
         </footer>
 
 
