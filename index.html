@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+        
 </head>
 <body>
     <div id="wrap">
@@ -25,7 +26,52 @@
             </div>
         </div>
 
-  
+        <div id="bannerClose_button">
+            <a class="banner_close">X</a>
+        </div>
+
+        <script src="js/banner_close.js"></script>
+
+        <div id="popup">
+            <img src="img/main/popup_image.png" alt="팝업 이미지">
+            <div class="close_popup">X 닫기</div>
+        </div>
+
+        <div id="loginMenu">
+            <div class="loginBox">
+                <p>LOGIN</p>
+                <p>반갑습니다.</p>
+                <p>로그인해주세요</p>
+                <button>로그인</button>
+            </div>
+            <div class="underBox">
+                도서상품권
+            </div>
+            <div class="underBox">
+                북카트
+            </div>
+            <div class="underBox">
+                오늘 본 상품
+            </div>
+            <div class="under_Ad_Box">
+                <img src="img/main/ad_image17.png" alt="광고 이미지">
+            </div>
+            <div class="under_UP_Box">
+                TOP
+            </div>
+            <div class="toggleBox">
+                <span class="toggle_prev">
+                    <img src="img/main/arrow_left.png" alt="왼쪽 슬라이드">
+                </span>
+                <span class="toggle_next">
+                    <img src="img/main/arrow_right.png" alt="오른쪽 슬라이드">
+                </span>
+            </div>
+        </div>
+
+        <script src="js/popup.js"></script>
+
+        <script src="js/loginMenu_slide.js"></script>
 
         <header>
             
@@ -49,6 +95,17 @@
                     <li><a href="#">고객센터</a></li>
                     <li><a href="#">모바일APP</a></li>
                     <li><a href="#">Language</a></li>
+                </ul>
+            </div>
+
+            <div id="kategorie_slide">
+                <ul>
+                    <li>국내도서</li>
+                    <li></li>
+                    <li>외국도서</li>
+                    <li>음반</li>
+                    <li>DVD</li>
+                    <li>굿즈#</li>
                 </ul>
             </div>
 
@@ -161,7 +218,7 @@
 
             <table id="selected_table">
                 <tr>
-                    <th class="first_th">베스트 셀러</th>
+                    <th class="first_th" colspan="2"> 베스트 셀러</th>
                 </tr>
                 <tr>
                     <th class="table_menu1">오늘</th>
@@ -214,7 +271,7 @@
 
                 <table id="hidden_table">
                     <tr>
-                        <th class="first_th">베스트 셀러</th>
+                        <th class="first_th" colspan="2">베스트 셀러</th>
                     </tr>
                     <tr>
                         <th class="table_menu1">오늘</th>
@@ -268,30 +325,9 @@
 
         <script src="js/ajax_book1.js"></script>
 
-        <script>
-            $(function(){
-                $('.mini_ad > img').mouseover(function(){
-                    $('.hidden_adImage').stop().slideDown();
+        <script src="js/ad_slide.js"></script>
 
-                });
-                $('.close1').click(function(){
-                    $(".hidden_adImage").stop().slideUp();
-                });
-            });
-        </script>
-
-        <script>
-            $(function(){
-                $('.table_menu1').click(function(){
-                    $('.selected_table').css("display", "block");
-                    $('.hidden_table').css("display", "none");
-                });
-                $('.table_menu2').click(function(){
-                    $('.selected_table').css("display", "none");
-                    $('.hidden_table').css("display", "block");
-                });
-            });
-        </script>
+        <script src="js/tableMenu.js"></script>
 
         <section>
             <div id="ad_container2">
@@ -368,31 +404,7 @@
 
         <script src="js/recommend_slide.js"></script>
 
-        <script>
-            $(function(){
-                var num = 1;
-
-                function ChangeImage(ad){
-                    if(ad){
-                        if(num == 5)num = 0
-                        num++; 
-                    } else {
-                        if(num == 1)num = 6
-                        num--;
-                    }
-                    var Ad_Images = document.getElementsByClassName("visible_ad")[0]
-                    Ad_Images.setAttribute("src", "img/main/ad_imageChange" + num + ".jpg")
-                }
-
-                $(".ad_prev").click(function(){
-                    ChangeImage(0);
-                });
-
-                $(".ad_next").click(function(){
-                    ChangeImage(1);
-                });
-            });
-        </script>
+        <script src="js/pass_ad.js"></script>
 
 
         <div id="section2">
@@ -561,7 +573,7 @@
 
             <div id="sale_container">
                 <ul id="sale_menu">
-                    <li class="SaleMenu1">특가할인</li>
+                    <li class="SaleMenu1 border_active">특가할인</li>
                     <li class="SaleMenu2">정가인하</li>
                 </ul>
                 <div id="product_container1">
@@ -585,7 +597,7 @@
                     </div>
                     <div class="product_box4">
                         <img src="img/main/product4.jpg" alt="상품 이미지">
-                        <h5>핑크퐁 상어가족 영어동요 마이크</h5>
+                        <h5>핑크퐁 영어동요 마이크</h5>
                         <p>정가 20,000원</p>
                         <p>14,800원</p>
                     </div>
@@ -627,20 +639,7 @@
 
         <script src="js/section4_slide.js"></script>
         
-        <script>
-            $(function(){
-                $('#product_container2').hide();
-
-                $('.SaleMenu1').click(function(){
-                    $('#product_container2').hide();
-                    $('#product_container1').show();
-                });
-                $('.SaleMenu2').click(function(){
-                    $('#product_container1').hide();
-                    $('#product_container2').show();
-                });
-            });
-        </script>
+        <script src="js/click_border.js"></script>
 
         <div id="section5">
             <div id="CD_container">

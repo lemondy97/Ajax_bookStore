@@ -50,6 +50,24 @@
         #banner_container1 .event_banner1 { width: 480px; height: 70px; cursor: pointer; position: absolute; top: 0; right: 0; }
         #banner_contanier1 .event_banner2 { width: 480px; height: 70px; cursor: pointer; position: absolute; top: 0; left: 0; }
 
+        #bannerClose_button { position: absolute; top: 0%; right: 25%; }
+        #bannerClose_button .banner_close { text-align: center; position: absolute; right: 0; top: 0%; width: 24px; height: 24px; background: rgb(0, 0, 0, 0.5); color: #fff; z-index: 20; cursor: pointer; }
+
+        #popup { display: none; width: 420px; height: 284px; position: absolute; top: 38%; right: 25%; z-index: 10; background-color: #fff; border-radius: 25px; color: #333; border: 1px solid #ddd; box-shadow: 3px 3px 3px #555; }
+        #popup .close_popup { position: absolute; bottom: 3px; right: 20px; cursor: pointer; font-family: 'GmarketSansMedium'; }
+
+        #loginMenu { position: fixed; width: 10px; right: 0; z-index: 999; height: 100%; border-left: 1px solid #bbb; }
+        #loginMenu .loginBox { width: 120px; height: 120px;  background-color: #EF554D; color: #fff; text-align: center; }
+        .loginBox p:nth-of-type(1) { font: 25px; font-family: 'GmarketSansBold'; padding-top: 10px; padding-bottom: 5px; }
+        .loginBox p:nth-of-type(2), p:nth-of-type(3) { font-size: 12px; }
+        .loginBox button { display: block; width: 96px; height: 23px; margin: 11px auto 0; text-align: center; background: #be3834; border: 1px solid #af322e; line-height: 22px; color: #fff; cursor: pointer; }
+        #loginMenu .underBox { width: 120px; height: 30px; background-color: #fff; border-top: 1px solid #bbb; font-size: 12px; line-height: 25px; padding: 0 10px; }
+        #loginMenu .under_Ad_Box { width: 120px; height: 540px; background-color: #fff; border-top: 1px solid #bbb; font-size: 12px; line-height: 25px; padding: 0 10px; }
+        #loginMenu .under_UP_Box { width: 120px; height: 120px; background-color: #fff; border-top: 1px solid #bbb; font-size: 12px; line-height: 25px; padding: 0 10px; }
+        #loginMenu .toggleBox { width: 35px;  position: absolute; top: 50%; transform: translateY(-50%); left: -35px; padding-top: 15px; background-color: #fff; height: 60px;
+                                       border: 1px solid #bbb; border-right: none; z-index: 10; cursor: pointer; }
+        .toggleBox .toggle_prev { display: none; }
+
         header { width: 100%; height: 172px; display: flex; flex-wrap: wrap; }
         header #menu_box1 { width: 50%; height: 32px; position: relative; border-bottom: 1px solid lightgray; }
         header #menu1 { width: 25%; height: 32px; text-align: center; position: absolute; top: 0; right: 25%;  }
@@ -83,6 +101,8 @@
         #menu4 li { float: left; width: 20%; font-family: 'GmarketSansLight'; cursor: pointer; }
         #menu4 li a { color: #fff1a2; font-family: 'GmarketSansMedium'; }
 
+        header #kategorie_slide { display: none; position: absolute; top: 45px; left: -3px; z-index: 25; width: 1000px; height: 740px; overflow: hidden; border: 2px solid #d74b45; }
+        #kategorie_slide ul { width: 100%; height: 95%; border-bottom: 1px solid #333; display: flex; flex-wrap: wrap; }
 
         #slider { width: 100%; height: 356px; position: relative; }
         #slider #banner_container2 { width: 100%; height: 316px; position: relative; background-color: #dbf1ff; }
@@ -95,7 +115,7 @@
         #select_menu li a { font-family: 'LotteMartHappy'; }
         
         #slider .mini_ad { width: 60px; height: 90px; position: absolute; top: 5%;  left: 15%;}
-        .mini_ad .hidden_adImage { display: none; width: 980px; height: 363px; position: relative; }
+        .mini_ad .hidden_adImage { display: none; width: 980px; height: 363px; position: absolute; z-index: 15; top: -20%; left: 245%; }
         .mini_ad p { width: 55px; font-size: 10px; text-align: center; background-color: #fff; border: 1px solid lightgray; border-radius: 15px; }
         .mini_ad p a { color: #e25039; }
         .mini_ad .close1 { display: none; width: 60px; height: 25px; position: absolute; bottom: 10px; right: 10px; background-color: #fff; 
@@ -109,24 +129,24 @@
                                           transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
         
         #slider #selected_table { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.5%; }
-        #selected_table .table_menu1 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; }
-        #selected_table .table_menu2 { border: 2px solid #666; cursor: pointer; }
+        #selected_table .table_menu1 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; height: 40px; }
+        #selected_table .table_menu2 { border: 2px solid #666; cursor: pointer; height: 40px; }
 
         #selected_table .rank { width: 20%; }
         #selected_table .ranking { width: 80%; }
         #selected_table .ranking:hover { text-decoration: underline; cursor: pointer; }
-        #selected_table td { font-family: 'LotteMartHappy'; font-size: 12px; }
+        #selected_table td { font-family: 'LotteMartHappy'; font-size: 12px; height: 21.7px;}
         #selected_table th { font-size: 14px; }
         #selected_table .first_th { width: 100px; }
 
         #slider #hidden_table { display: none; background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 18.5%; }
-        #hidden_table .table_menu1 { border: 2px solid #666; cursor: pointer; }
-        #hidden_table .table_menu2 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; }
+        #hidden_table .table_menu1 { border: 2px solid #666; cursor: pointer; height: 40px; }
+        #hidden_table .table_menu2 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; height: 40px; }
 
         #hidden_table .rank { width: 20%; }
         #hidden_table .ranking { width: 80%; }
         #hidden_table .ranking:hover { text-decoration: underline; cursor: pointer; }
-        #hidden_table td { font-family: 'LotteMartHappy'; font-size: 12px; }
+        #hidden_table td { font-family: 'LotteMartHappy'; font-size: 12px; height: 21.7px; }
         #hidden_table th { font-size: 14px; }
         #hidden_table .first_th { width: 100px; }
 
@@ -242,17 +262,19 @@
         #book_slideContainer div { width: 300px; font-family: 'Eulyoo1945-Regular'; }
         #book_slideContainer #ul_wrap ul li div img { width: 91px; height: 24px; }
 
-        #sale_container { width: 450px; height: 400px; position: relative; border-top: 1px solid #333; margin-top: 25px; }
-        #sale_menu { width: 45%; height: 40px; display: flex; }
-        #sale_menu li { float: left; width: 50%; height: 100%; line-height: 35px; text-align: center; font-weight: bold; cursor: pointer; }
-        #sale_menu li:nth-of-type(1) { color: #e25039; font-size: 14px; border: 1px solid #333; border-bottom: none; }
-        #sale_menu li:nth-of-type(2) { font-size: 14px; }
+        #sale_container { width: 450px; height: 400px; position: relative; margin-top: 25px; }
+        #sale_menu { width: 100%; height: 40px; display: flex; border-bottom: 1px solid #333; }
+        #sale_menu li { float: left; width: 25%; height: 40px; font-size: 14px; line-height: 35px; text-align: center; font-weight: bold; cursor: pointer; }
 
-        #sale_container #product_container1 { width: 100%; height: 250px; display: flex; margin-top: 50px; }
-        #product_container1 .product_box1, .product_box2, .product_box3, .product_box4 { width: 25%; height: 50%; text-align: center; cursor: pointer; }
+
+        .border_active { background-color: #fff; border: 1px solid #333; border-bottom: none; color: #e25039; }
+
+
+        #sale_container #product_container1 { width: 100%; height: 200px; display: flex; margin-top: 50px; align-items: flex-end; }
+        #product_container1 .product_box1, .product_box2, .product_box3, .product_box4 { width: 25%; text-align: center; cursor: pointer; }
         .product_box1, .product_box2, .product_box3, .product_box4 p { font-size: 12px; }
 
-        #sale_container #product_container2 { width: 100%; height: 250px; display: flex; margin-top: 50px; }
+        #sale_container #product_container2 { width: 100%; height: 175px; display: flex; margin-top: 50px; align-items: flex-end; }
         #product_container2 .product_box5, .product_box6, .product_box7, .product_box8 { width: 25%; height: 50%; text-align: center; cursor: pointer; }
         .product_box5, .product_box6, .product_box7, .product_box8 p { font-size: 12px; }
 
