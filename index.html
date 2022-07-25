@@ -698,11 +698,20 @@
 
             <div id="ED_container">
                 <h4>특별판 Special Ed.</h4>
-                <img src="img/main/ED_image1.jpg" alt="스페셜 에디션" class="ED_Images">
-                <span class="section5_left" onclick="left_button();">
+                <div class="ajax_box17">
+                </div>
+                <div class="ajax_box18">
+                </div>
+                <div class="ajax_box19">
+                </div>
+                <div class="ajax_box20">
+                </div>
+                <div class="ajax_box21">
+                </div>
+                <span class="section5_left">
                     <img src="img/main/arrow_left.png" alt="왼쪽 화살표" >
                 </span>
-                <span class="section5_right" onclick="right_button();">
+                <span class="section5_right">
                     <img src="img/main/arrow_right.png" alt="오른쪽 화살표">
                 </span>
             </div>
@@ -710,30 +719,12 @@
 
         </div>
 
-        <script>
-            let ED_Img = document.querySelector(".ED_Images")
-            let Image_List = ["img/main/ED_image1.jpg", "img/main/ED_image2.jpg", "img/main/ED_image3.jpg", "img/main/ED_image4.jpg", "img/main/ED_image5.jpg" ];
-            let i = 0;
-        
-            function left_button(){
-                i--;
-                ED_Img.src = Image_List[i];
-                if(i < 0){
-                    i = Image_List.length-1;
-                    ED_Img.src = Image_List[i];
-                }
-            }
 
-            function right_button(){
-                i++;
-                ED_Img.src = Image_List[i];
-                if(i >= Image_List.length){
-                    i = 0;
-                    ED_Img.src = Image_List[i];
-                }
-            }
 
-        </script>
+        <script src="js/ajax_book10.js"></script>
+
+    
+
 
         <div id="section6">
             <div id="ad_container3">
@@ -823,6 +814,9 @@
                     </li>
                 </ul>
             </div>
+
+            <p>인터파크도서에 등록된 중고책 오픈마켓 상품은 그 내용과 책임이 모두 판매자에게 있으며, 인터파크도서는 해당상품과 내용에 대해 책임지지 않습니다.</p>
+            <p>Copyright ⓒ INTERPARK Corporation All rights reserved.</p>
         </footer>
 
 
