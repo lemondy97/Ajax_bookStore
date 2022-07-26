@@ -42,7 +42,10 @@
             })
                 .done(function(msg4){
                     $(".Ajax_boxes28").append("<img src='" + msg4.documents[0].thumbnail + "'/>");
-                    $(".Ajax_boxes28").append("<h5>" + msg4.documents[0].title + "</h5>");
+                    var str = msg4.documents[0].title;
+                    var str2 = str.substring(0, 29);
+
+                    $(".Ajax_boxes28").append("<h5>" + str2 + "</h5>");
                     $(".Ajax_boxes28").append("<p>" + "19,800원 + 1100p" + "<p>");
                 });
 

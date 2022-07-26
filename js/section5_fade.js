@@ -1,0 +1,10 @@
+            $(function(){
+                $('.section5_left3').click(function(){
+                    $('.ajax_box17').show();
+                    $('.ajax_box18').hide();
+                });
+                $('.section5_right3').click(function(){
+                    $('.ajax_box18').show();
+                    $('.ajax_box17').hide();
+                });
+            });

@@ -42,7 +42,10 @@
             })
                 .done(function(msg4){
                     $(".Ajax_boxes22").append("<img src='" + msg4.documents[0].thumbnail + "'/>");
-                    $(".Ajax_boxes22").append("<h5>" + msg4.documents[0].title + "</h5>");
+                    var str = msg4.documents[0].title;
+                    var str2 = str.substring(0, 26);
+
+                    $(".Ajax_boxes22").append("<h5>" + str2 + "</h5>");
                     $(".Ajax_boxes22").append("<p>" + "10,800원 + 600p" + "<p>");
                 });
 
@@ -54,7 +57,10 @@
             })
                 .done(function(msg5){
                     $(".Ajax_boxes23").append("<img src='" + msg5.documents[0].thumbnail + "'/>");
-                    $(".Ajax_boxes23").append("<h5>" + msg5.documents[0].title + "</h5>");
+                    var str = msg5.documents[0].title;
+                    var str2 = str.substring(0, 30);
+
+                    $(".Ajax_boxes23").append("<h5>" + str2 + "</h5>");
                     $(".Ajax_boxes23").append("<p>" + "9,900원 + 550p" + "<p>");
                 });
 
@@ -66,6 +72,9 @@
             })
                 .done(function(msg6){
                     $(".Ajax_boxes24").append("<img src='" + msg6.documents[0].thumbnail + "'/>");
-                    $(".Ajax_boxes24").append("<h5>" + msg6.documents[0].title + "</h5>");
+                    var str = msg6.documents[0].title;
+                    var str2 = str.substring(0, 29);
+
+                    $(".Ajax_boxes24").append("<h5>" + str2 + "</h5>");
                     $(".Ajax_boxes24").append("<p>" + "9,900원 + 550p" + "<p>");
                 });
