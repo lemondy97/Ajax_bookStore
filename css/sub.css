@@ -1,6 +1,6 @@
 section {
   width: 100%;
-  height: 5000px;
+  height: 6500px;
 }
 section #location_container {
   width: 100%;
@@ -201,6 +201,12 @@ section #ajax_dataBox2 {
 section #ajax_dataBox2 h3 {
   margin-top: 50px;
 }
+section #ajax_dataBox2 .subject_li {
+  font-weight: bold;
+}
+section #ajax_dataBox2 ul li ul li {
+  font-size: 14px;
+}
 section #ajax_dataBox3 {
   width: 900px;
   height: 545px;
@@ -208,4 +214,10 @@ section #ajax_dataBox3 {
 }
 section #ajax_dataBox3 h3 {
   margin-top: 50px;
+}
+section #ajax_dataBox3 p:nth-of-type(3) {
+  font-size: 12px;
+}
+section #ajax_dataBox3 p:nth-of-type(5) {
+  font-size: 12px;
 }
