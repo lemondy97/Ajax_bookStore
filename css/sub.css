@@ -115,9 +115,97 @@ section #section_contents1 .contentBox2 table {
 }
 section #section_contents1 .contentBox2 table td {
   width: 50%;
-  border: 1px solid #eaeaea;
   font-size: 14px;
 }
 section #section_contents1 .contentBox2 table td:nth-of-type(1) {
   font-weight: bold;
+}
+section #section_contents1 .contentBox2 > span:nth-of-type(1), section #section_contents1 .contentBox2 > span:nth-of-type(2) {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+section #section_contents1 .contentBox2 > span:nth-of-type(1) {
+  margin: 20px 50px;
+}
+section #section_contents1 .contentBox2 > span:nth-of-type(2) {
+  margin-right: 50px;
+}
+section #section_contents1 .contentBox2 span img {
+  vertical-align: middle;
+}
+section #section_contents1 .contentBox2 button {
+  width: 100px;
+  height: 50px;
+  background-color: #f26532;
+  border: #ea4d14;
+  color: #fff;
+  cursor: pointer;
+}
+section #section_anchor {
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #d1d8e4;
+}
+section #section_anchor #anchor_contents {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+}
+section #section_anchor #anchor_contents .anchor_menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+}
+section #section_anchor #anchor_contents .anchor_menu li {
+  float: left;
+  width: 25%;
+  line-height: 80px;
+  font-weight: bold;
+  cursor: pointer;
+}
+section #introduce_contents {
+  width: 1080px;
+  height: 50px;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+}
+section #introduce_contents h3 {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+section #bookImage_space {
+  width: 690px;
+  height: 2950px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+section #ajax_dataBox1 {
+  width: 900px;
+  height: 285px;
+  margin: 0 auto;
+}
+section #ajax_dataBox1 h3 {
+  margin-top: 50px;
+}
+section #ajax_dataBox2 {
+  width: 900px;
+  height: 615px;
+  margin: 0 auto;
+}
+section #ajax_dataBox2 h3 {
+  margin-top: 50px;
+}
+section #ajax_dataBox3 {
+  width: 900px;
+  height: 545px;
+  margin: 0 auto;
+}
+section #ajax_dataBox3 h3 {
+  margin-top: 50px;
 }

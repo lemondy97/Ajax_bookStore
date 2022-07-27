@@ -281,11 +281,37 @@
 
             <div id="section_contents1">
                 <div class="contentBox1">
-
                 </div>
                 <div class="contentBox2">
-
                 </div>
+            </div>
+
+            <div id="section_anchor">
+                <div id="anchor_contents">
+                    <ul class="anchor_menu">
+                        <li>책소개</li>
+                        <li>목차</li>
+                        <li>저자소개</li>
+                        <li>서평</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="introduce_contents">
+                <h3>책 소개 이미지</h3>
+            </div>
+
+            <div id="bookImage_space">
+                <img src="img/sub/introduce_bookImage1.jpg" alt="책 소개 이미지">
+            </div>
+
+            <div id="ajax_dataBox1">
+            </div>
+            
+            <div id="ajax_dataBox2">
+            </div>
+
+            <div id="ajax_dataBox3">
             </div>
         </section>
 
@@ -316,7 +342,24 @@
                     $(".contentBox2 table").append("<tr>" + "<td>" + "소득공제 여부" + "</td>"  + "<td>" + "가능 (대여는 제외)" + "</td>" + "</tr>");
                     $(".contentBox2").append("<p>" + "지원 단말기 : IOS 11.0 이상, Android 4.1 이상, PC Window 8 OS 이상 지원" + "</p>");
                     $(".contentBox2").append("<p>" + " 듣기(TTS) 지원(모바일에서만 이용 가능" + "</p>");
+                    $(".contentBox2").append("<span>" + "<img src='" + "img/sub/cart_icon.png" + "'/>" + "</span>")
+                    $(".contentBox2").append("<span>" + "<img src='" + "img/sub/present_icon.png" + "'/>" + "</span>")
+                    $(".contentBox2").append("<button>" + "구매" + "</button>");
                 });
+        </script>
+
+        <script>
+            $(function(){
+                $.get("./ajax_text/ajax_data1.txt", function(data){
+                    $("#ajax_dataBox1").html(data);
+                })
+                $.get("./ajax_text/ajax_data2.txt", function(data){
+                    $("#ajax_dataBox2").html(data);
+                })
+                $.get("./ajax_text/ajax_data3.txt", function(data){
+                    $("#ajax_dataBox3").html(data);
+                })
+            })
         </script>
 
 
