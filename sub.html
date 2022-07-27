@@ -286,13 +286,17 @@
                 </div>
             </div>
 
+            <div id="popup_box">
+                <img src="img/sub/bigBooK_image.jpg" alt="책 이미지">
+            </div>
+
             <div id="section_anchor">
                 <div id="anchor_contents">
                     <ul class="anchor_menu">
-                        <li><a href="#anchor1">책소개</a></li>
-                        <li><a href="#anchor2">목차</a></li>
-                        <li><a href="#anchor3">저자소개</a></li>
-                        <li><a href="#anchor4">서평</a></li>
+                        <li class="anchorMenu1"><a href="#anchor1" class="active">책소개</a></li>
+                        <li class="anchorMenu2"><a href="#anchor2">목차</a></li>
+                        <li class="anchorMenu3"><a href="#anchor3">저자소개</a></li>
+                        <li class="anchorMenu4"><a href="#anchor4">서평</a></li>
                     </ul>
                 </div>
             </div>
@@ -315,7 +319,7 @@
             </div>
 
             <div id="assessment_space">
-                <h3 id="#anchor4">서평(<a>0</a>)</h3>
+                <h3 id="anchor4">서평(<a>0</a>)</h3>
                 <div class="review_textArea">
                     <p><img src="img/sub/bigstar_0.jpg" alt="별점">
                         <br>별점으로 평가해주세요.
@@ -356,6 +360,46 @@
                     $(".contentBox2").append("<span>" + "<img src='" + "img/sub/present_icon.png" + "'/>" + "</span>")
                     $(".contentBox2").append("<button>" + "구매" + "</button>");
                 });
+        </script>
+
+        <script>
+            $(function(){
+                $('.contentBox1').click(function(){
+                    $('#popup_box').show();
+                });
+            });    
+            $('#popup_box').not().click(function(){
+                $(this).hide();
+            });
+        </script>
+
+        <script>
+            $(function(){
+                $('.anchorMenu1').click(function(){
+                    $('.anchorMenu1 a').addClass('active');
+                    $('.anchorMenu2 a').removeClass('active');
+                    $('.anchorMenu3 a').removeClass('active');
+                    $('.anchorMenu4 a').removeClass('active');
+                });
+                $('.anchorMenu2').click(function(){
+                    $('.anchorMenu1 a').removeClass('active');
+                    $('.anchorMenu2 a').addClass('active');
+                    $('.anchorMenu3 a').removeClass('active');
+                    $('.anchorMenu4 a').removeClass('active');
+                });
+                $('.anchorMenu3').click(function(){
+                    $('.anchorMenu1 a').removeClass('active');
+                    $('.anchorMenu2 a').removeClass('active');
+                    $('.anchorMenu3 a').addClass('active');
+                    $('.anchorMenu4 a').removeClass('active');
+                });
+                $('.anchorMenu4').click(function(){
+                    $('.anchorMenu1 a').removeClass('active');
+                    $('.anchorMenu2 a').removeClass('active');
+                    $('.anchorMenu3 a').removeClass('active');
+                    $('.anchorMenu4 a').addClass('active');
+                });
+            });
         </script>
 
         <script>

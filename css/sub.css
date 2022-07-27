@@ -54,6 +54,7 @@ section #section_contents1 .contentBox1 {
 }
 section #section_contents1 .contentBox1 > img {
   width: 100%;
+  cursor: zoom-in;
 }
 section #section_contents1 .contentBox1 button {
   width: 60px;
@@ -103,6 +104,7 @@ section #section_contents1 .contentBox2 div img {
   vertical-align: middle;
   margin-right: 3px;
   margin-left: 25px;
+  cursor: pointer;
 }
 section #section_contents1 .contentBox2 div img:nth-of-type(1) {
   margin-left: 0;
@@ -128,12 +130,18 @@ section #section_contents1 .contentBox2 > span:nth-of-type(1), section #section_
 }
 section #section_contents1 .contentBox2 > span:nth-of-type(1) {
   margin: 20px 50px;
+  width: 50px;
+  height: 50px;
 }
 section #section_contents1 .contentBox2 > span:nth-of-type(2) {
   margin-right: 50px;
+  width: 50px;
+  height: 50px;
 }
 section #section_contents1 .contentBox2 span img {
   vertical-align: middle;
+  margin-left: 3px;
+  margin-top: 3px;
 }
 section #section_contents1 .contentBox2 button {
   width: 100px;
@@ -143,11 +151,33 @@ section #section_contents1 .contentBox2 button {
   color: #fff;
   cursor: pointer;
 }
+section #popup_box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 15;
+}
+section #popup_box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 section #section_anchor {
   width: 100%;
   height: 80px;
   border-top: 1px solid #f4f4f4;
   border-bottom: 1px solid #d1d8e4;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  left: 0;
 }
 section #section_anchor #anchor_contents {
   width: 980px;
@@ -167,6 +197,24 @@ section #section_anchor #anchor_contents .anchor_menu li {
   line-height: 80px;
   font-weight: bold;
   cursor: pointer;
+}
+section #section_anchor #anchor_contents .anchor_menu li a {
+  color: #333;
+}
+section #section_anchor #anchor_contents .anchor_menu li a:visited {
+  color: #333;
+}
+section #section_anchor #anchor_contents .anchor_menu li a.active::after {
+  position: absolute;
+  top: 94%;
+  left: -5%;
+  content: "";
+  background-color: #f26532;
+  width: 15%;
+  height: 4.5px;
+  transition: transform 0.5s;
+  transform: scaleX(1);
+  transform-origin: center;
 }
 section #introduce_contents {
   width: 1080px;
