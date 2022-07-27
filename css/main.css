@@ -9,8 +9,8 @@
 
 
         #slider #select_container { width: 100%; height: 40px; background-color: #f7f7f7; position: relative; }
-        #select_container #select_menu { width: 760px; height: 40px; position: absolute; top: 0; left: 30%; }
-        #select_menu li { width: 25%; float: left; cursor: pointer; line-height: 40px; }
+        #select_container #select_menu { width: 760px; height: 40px; margin: 0 auto; }
+        #select_menu li { float: left; cursor: pointer; line-height: 40px; text-align: center; padding: 0 15px; }
         #select_menu li a { font-family: 'LotteMartHappy'; }
         
         #slider .mini_ad { width: 60px; height: 90px; position: absolute; top: 5%;  left: -15%;}
