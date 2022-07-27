@@ -8,7 +8,7 @@ section #location_container {
   background: #f4f4f4;
 }
 section #location_container #location_contents {
-  width: 980px;
+  width: 900px;
   height: 100%;
   margin: 0 auto;
 }
@@ -29,7 +29,7 @@ section #subject_container {
   border-bottom: 1px solid #f4f4f4;
 }
 section #subject_container #subject_contents {
-  width: 980px;
+  width: 900px;
   height: 100%;
   margin: 0 auto;
 }
@@ -41,7 +41,7 @@ section #subject_container #subject_contents p {
   font-size: 14px;
 }
 section #section_contents1 {
-  width: 980px;
+  width: 900px;
   height: 500px;
   margin: 0 auto;
   display: flex;
@@ -192,6 +192,11 @@ section #ajax_dataBox1 {
 }
 section #ajax_dataBox1 h3 {
   margin-top: 50px;
+  color: #F26C3B;
+}
+section #ajax_dataBox1 p {
+  font-size: 14px;
+  color: #555;
 }
 section #ajax_dataBox2 {
   width: 900px;
@@ -200,12 +205,19 @@ section #ajax_dataBox2 {
 }
 section #ajax_dataBox2 h3 {
   margin-top: 50px;
+  color: #F26C3B;
 }
 section #ajax_dataBox2 .subject_li {
   font-weight: bold;
 }
+section #ajax_dataBox2 p:nth-of-type(2), section #ajax_dataBox2 p:nth-of-type(3), section #ajax_dataBox2 p:nth-of-type(4), section #ajax_dataBox2 p:nth-of-type(5), section #ajax_dataBox2 p:nth-of-type(6) {
+  font-size: 14px;
+  color: #333;
+}
 section #ajax_dataBox2 ul li ul li {
   font-size: 14px;
+  font-weight: normal;
+  color: #333;
 }
 section #ajax_dataBox3 {
   width: 900px;
@@ -214,10 +226,44 @@ section #ajax_dataBox3 {
 }
 section #ajax_dataBox3 h3 {
   margin-top: 50px;
+  color: #F26C3B;
 }
 section #ajax_dataBox3 p:nth-of-type(3) {
-  font-size: 12px;
+  font-size: 13px;
+  color: #555;
 }
 section #ajax_dataBox3 p:nth-of-type(5) {
-  font-size: 12px;
+  font-size: 13px;
+  color: #555;
+}
+section #assessment_space {
+  width: 900px;
+  height: 635px;
+  margin: 0 auto;
+}
+section #assessment_space h3 a {
+  color: #f26532;
+}
+section #assessment_space .review_textArea {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  padding: 17px;
+  text-align: center;
+  box-shadow: 0 3px #fbfbfb;
+  width: 100%;
+  height: 195px;
+}
+section #assessment_space .review_textArea p {
+  color: #909090;
+}
+section #assessment_space .review_textArea button {
+  width: 190px;
+  height: 50px;
+  color: #fff;
+  background: #f26532;
+  border: 1px solid #ea4d14;
+  cursor: pointer;
+  margin-top: 20px;
 }

@@ -116,7 +116,7 @@
         header #kategorie_slide { display: none; position: absolute; top: 242px; left: 410px; z-index: 25; width: 850px; height: 685px; overflow: hidden; background: #fff; }
         #kategorie_wrap { position: absolute; top: 0; left: 3px; z-index: 2; width: 847px; height: 685px; background: #fff; border: 2px solid #d74b45; border-top: 0; }
         #kategorie_nav { height: 640px; border-bottom: 1px solid #333; }
-        #kategorie_slide .kategorie1, .kategorie2, .kategorie3, .kategorie4, .kategorie5  { width: 150px; position: relative; float: left; height: 689px; border-left: 1px solid #e5e5e5; padding: 16px 0 0 30px; }
+        #kategorie_slide .kategorie1, .kategorie2, .kategorie3, .kategorie4, .kategorie5  { width: 150px; position: relative; float: left; height: 638px; border-left: 1px solid #e5e5e5; padding: 16px 0 0 30px; }
         #kategorie_slide .kategorie1 { border-left: none; padding-left: 28px; width: 220px; }
         .kategorie1, .kategorie2, .kategorie3, .kategorie4, .kategorie5 ul li { font-size: 14px; cursor: pointer; }
         #kategorie_slide h4 { margin-bottom: 10px; }
