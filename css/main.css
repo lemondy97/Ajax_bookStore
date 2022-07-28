@@ -28,26 +28,27 @@
                                           transition: transform 0.5s; transform: scaleX(1); transform-origin: center; }
         
         #slider #selected_table { background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 0; }
-        #selected_table .table_menu1 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; height: 40px; }
-        #selected_table .table_menu2 { border: 2px solid #666; cursor: pointer; height: 40px; }
+        .table_menu1 { border: 1px solid #666; cursor: pointer; width: 50px; height: 30px; position: absolute; top: 5%; left: 89%; z-index: 5; background: #fff; }
+        .table_menu2 { border: 1px solid #666; cursor: pointer; width: 50px; height: 30px; position: absolute; top: 5%; left: 94%; z-index: 5; background: #fff; }
 
-        #selected_table .rank { width: 20%; }
-        #selected_table .ranking { width: 80%; }
+        #selected_table .rank { width: 15%; }
+        #selected_table .ranking { width: 85%; }
         #selected_table .ranking:hover { text-decoration: underline; cursor: pointer; }
-        #selected_table td { font-family: 'GmarketSansLight'; font-size: 12px; height: 21.7px;}
+        #selected_table td { font-family: 'GmarketSansLight'; font-size: 12px; height: 21.7px; text-align: center; }
+        #selected_table td:nth-of-type(2) { text-align: left; }
         #selected_table th { font-size: 14px; }
-        #selected_table .first_th { width: 100px; font-family: 'GmarketSansMedium'; }
+        #selected_table .first_th { width: 100px; height: 50px; font-family: 'GmarketSansMedium'; text-align: left; padding-left: 8px; }
 
         #slider #hidden_table { display: none; background: rgba(50, 50, 50, 0.5); color: #fff; width: 220px; height: 316px; position: absolute; top: 0; right: 0; }
-        #hidden_table .table_menu1 { border: 2px solid #666; cursor: pointer; height: 40px; }
-        #hidden_table .table_menu2 { background: rgba(27, 27, 27, 0.2); border: 2px solid #666; cursor: pointer; height: 40px; }
 
-        #hidden_table .rank { width: 20%; }
-        #hidden_table .ranking { width: 80%; }
+
+        #hidden_table .rank { width: 15%; }
+        #hidden_table .ranking { width: 85%; }
         #hidden_table .ranking:hover { text-decoration: underline; cursor: pointer; }
-        #hidden_table td { font-family: 'GmarketSansLight'; font-size: 12px; height: 21.7px; }
+        #hidden_table td { font-family: 'GmarketSansLight'; font-size: 12px; height: 21.7px; text-align: center; }
+        #hidden_table td:nth-of-type(2) { text-align: left; }
         #hidden_table th { font-size: 14px; }
-        #hidden_table .first_th { width: 100px; font-family: 'GmarketSansMedium'; }
+        #hidden_table .first_th { width: 100px; height: 50px; font-family: 'GmarketSansMedium'; text-align: left; padding-left: 8px; }
 
         #slider #ajax_bookContainer1 { width: 760px; height: 316px; display: flex; justify-content: space-around; position: absolute; top:0; }
         #ajax_bookContainer1 h3 { width: 75%; }

@@ -13,7 +13,7 @@
 }
 section {
   width: 100%;
-  height: 7550px;
+  height: auto;
 }
 section #location_container {
   width: 100%;
@@ -35,6 +35,7 @@ section #location_container #location_contents .location li {
   padding: 0 15px;
   line-height: 50px;
   cursor: pointer;
+  font-family: "NanumBarunGothic";
 }
 section #subject_container {
   width: 100%;
@@ -103,12 +104,14 @@ section #section_contents1 .contentBox2 p:nth-of-type(1) {
   margin-left: 50px;
   color: #555;
   font-family: "UNPGothicKS";
+  font-size: 12px;
 }
 section #section_contents1 .contentBox2 p:nth-of-type(2) {
   margin-top: 3px;
   margin-left: 50px;
   color: #555;
   font-family: "UNPGothicKS";
+  font-size: 12px;
 }
 section #section_contents1 .contentBox2 div {
   width: 100%;
@@ -132,7 +135,6 @@ section #section_contents1 .contentBox2 table {
   width: 300px;
   height: 200px;
   margin-left: 50px;
-  border: 1px solid #eaeaea;
 }
 section #section_contents1 .contentBox2 table td {
   width: 50%;
@@ -326,6 +328,7 @@ section #ajax_dataBox1 h3 {
 section #ajax_dataBox1 p {
   font-size: 14px;
   color: #555;
+  line-height: 18px;
 }
 section #ajax_dataBox2 {
   width: 900px;
@@ -365,14 +368,16 @@ section #ajax_dataBox3 h3 {
 section #ajax_dataBox3 p:nth-of-type(3) {
   font-size: 13px;
   color: #555;
+  line-height: 18px;
 }
 section #ajax_dataBox3 p:nth-of-type(5) {
   font-size: 13px;
   color: #555;
+  line-height: 18px;
 }
 section #assessment_space {
   width: 900px;
-  height: 605px;
+  height: auto;
   margin: 0 auto;
 }
 section #assessment_space h3 {
@@ -456,6 +461,7 @@ section #assessment_space .review_space textarea {
   line-height: 20px;
   overflow: auto;
   margin-top: 20px;
+  cursor: pointer;
 }
 section #assessment_space .review_space .regist_button, section #assessment_space .review_space .cancel_button {
   margin-left: 100px;
@@ -467,6 +473,7 @@ section #assessment_space .review_space .regist_button, section #assessment_spac
   box-shadow: 0 2px #f2f2f2;
   width: 50px;
   height: 30px;
+  cursor: pointer;
 }
 section #assessment_space .review_space .cancel_button {
   margin-left: 0;
@@ -557,12 +564,13 @@ section #ajax_container2 .ajax_box6, section #ajax_container2 .ajax_box7, sectio
 }
 section #ebook_explain {
   width: 900px;
-  height: 250px;
+  height: 275px;
   margin: 0 auto;
   background: #f4f4f4;
   border-radius: 4px;
   padding: 30px 36px;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 section #ebook_explain h3 {
   margin-bottom: 10px;
@@ -573,4 +581,5 @@ section #ebook_explain ul li {
   font-size: 14px;
   color: #666;
   font-family: "UNPGothicKS";
+  line-height: 20px;
 }
