@@ -10,5 +10,10 @@
                 event.preventDefault();
                 });
 
+	   $('#image_button').click(function(){
+                    $('#image_button').hide();
+                    $('#bookImage_space').css("height", "2950px");
+                });
+
 
             });
