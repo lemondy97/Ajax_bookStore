@@ -324,97 +324,68 @@
                     <p><img src="img/sub/bigstar_0.jpg" alt="별점">
                         <br>별점으로 평가해주세요.
                     </p>
-                    <button>서평쓰기</button>
+                    <button class="toggle_button">서평쓰기</button>
+                    <div class="review_space">
+                        <form>
+                            <label><input type="checkbox" name="agree" value="spoiler"> 스포일러가 포함되어 있습니다.</label>
+                            <button type="submit" class="regist_button" onclick="registButton()">등록</button>
+                            <button type="reset" class="cancel_button">취소</button>
+                            <textarea placeholder="작품과 무관한 광고, 욕설 및 비방, 청소년보호정책에 위배되는 내용은 사전 동의 없이 비공개 처리될수있습니다."></textarea>
+                        </form>
+                    </div>
                 </div>
+            </div>
+
+            <div id="review_tab">
+                <ul id="tab">
+                    <li><a>전체</a></li>
+                </ul>
+                <p>회원님께서 첫 서평의 주인공이 되어주세요.</p>
+            </div>
+
+            <h3 class="ajax_subject1">이 분야의 베스트</h3>
+            <div id="ajax_container1">
+                
+                <div class="ajax_box1">
+                </div>
+                <div class="ajax_box2">
+                </div>
+                <div class="ajax_box3">
+                </div>
+                <div class="ajax_box4">
+                </div>
+                <div class="ajax_box5">
+                </div>
+            </div>
+
+            <h3 class="ajax_subject2">자~떠나자♪ 북캉스! 서점 상반기 BEST</h3>
+            <div id="ajax_container2">
+                
+                <div class="ajax_box6">
+                </div>
+                <div class="ajax_box7">
+                </div>
+                <div class="ajax_box8">
+                </div>
+                <div class="ajax_box9">
+                </div>
+                <div class="ajax_box10">
+                </div>
+            </div>
+
+            <div id="ebook_explain">
             </div>
         </section>
 
-        <script>
-                $.ajax({
-                method: "GET",
-                url: "https://dapi.kakao.com/v3/search/book?target=title",
-                data: { query: "기억의 뇌과학" },
-                headers: { Authorization: "KakaoAK 5c9917469ae8a14e144babc252a1b16c" }
-                })
+        <script src="js/sub_ajaxContents.js"></script>
+        <script src="js/sub_popup.js"></script>
+        <script src="js/sub_menuClick.js"></script>
+        <script src="js/sub_GETdata.js"></script>
+        <script src="js/sub_scrollActive.js"></script>
+        <script src="js/sub_buttonClick.js"></script>
+        <script src="js/sub_ajaxBook1.js"></script>
+        <script src="js/sub_ajaxBook2.js"></script>
 
-                .done(function(msg){
-                    $(".contentBox1").append("<img src='" + msg.documents[0].thumbnail + "'/>");
-                    $(".contentBox1").append("<button>" + "미리보기" + "</button>");
-                    $(".contentBox2").append("<h5>" + msg.documents[0].authors + "<a>" + " 저 " + "</a>" + " | " + msg.documents[0].translators + "<a>" + " 역" + "</a>" + "</h5>");
-                    var str = msg.documents[0].datetime;
-                    var str2 = str.substring(0, 10);
-
-                    $(".contentBox2").append("<h5>" + msg.documents[0].publisher + "<a>" + " 출판사 " + "</a>" + " | " + str2 + "</h5>");
-                    $(".contentBox2").append("<div>");
-                    $(".contentBox2 div").append("<img src='" + "img/sub/star_0.jpg" + "'/>" + "<span>" + "<a>" + " 0.0" + "</a>" + "(0명)" +  "</span>" );
-                    $(".contentBox2 div").append("<img src='" + "img/sub/review.png" + "'/>" + "<span>" + " 서평" + "(" + "<a>" + "0" + "</a>" + ")"  );
-                    $(".contentBox2 div").append("<img src='" + "img/sub/share.png" + "'/>" + "<span>" + " 공유하기" );
-                    $(".contentBox2").append("<table>");
-                    $(".contentBox2 table").append("<tr>" + "<td>" + "전차책 정가" + "</td>"  + "<td>" + msg.documents[0].price + "원" + "</td>" + "</tr>");
-                    $(".contentBox2 table").append("<tr>" + "<td>" + "구매" + "</td>"  + "<td>" + msg.documents[0].price + "원" + "</td>" + "</tr>");
-                    $(".contentBox2 table").append("<tr>" + "<td>" + "출간정보" + "</td>"  + "<td>" + str2 + "</td>" + "</tr>");
-                    $(".contentBox2 table").append("<tr>" + "<td>" + "소득공제 여부" + "</td>"  + "<td>" + "가능 (대여는 제외)" + "</td>" + "</tr>");
-                    $(".contentBox2").append("<p>" + "지원 단말기 : IOS 11.0 이상, Android 4.1 이상, PC Window 8 OS 이상 지원" + "</p>");
-                    $(".contentBox2").append("<p>" + " 듣기(TTS) 지원(모바일에서만 이용 가능" + "</p>");
-                    $(".contentBox2").append("<span>" + "<img src='" + "img/sub/cart_icon.png" + "'/>" + "</span>")
-                    $(".contentBox2").append("<span>" + "<img src='" + "img/sub/present_icon.png" + "'/>" + "</span>")
-                    $(".contentBox2").append("<button>" + "구매" + "</button>");
-                });
-        </script>
-
-        <script>
-            $(function(){
-                $('.contentBox1').click(function(){
-                    $('#popup_box').show();
-                });
-            });    
-            $('#popup_box').not().click(function(){
-                $(this).hide();
-            });
-        </script>
-
-        <script>
-            $(function(){
-                $('.anchorMenu1').click(function(){
-                    $('.anchorMenu1 a').addClass('active');
-                    $('.anchorMenu2 a').removeClass('active');
-                    $('.anchorMenu3 a').removeClass('active');
-                    $('.anchorMenu4 a').removeClass('active');
-                });
-                $('.anchorMenu2').click(function(){
-                    $('.anchorMenu1 a').removeClass('active');
-                    $('.anchorMenu2 a').addClass('active');
-                    $('.anchorMenu3 a').removeClass('active');
-                    $('.anchorMenu4 a').removeClass('active');
-                });
-                $('.anchorMenu3').click(function(){
-                    $('.anchorMenu1 a').removeClass('active');
-                    $('.anchorMenu2 a').removeClass('active');
-                    $('.anchorMenu3 a').addClass('active');
-                    $('.anchorMenu4 a').removeClass('active');
-                });
-                $('.anchorMenu4').click(function(){
-                    $('.anchorMenu1 a').removeClass('active');
-                    $('.anchorMenu2 a').removeClass('active');
-                    $('.anchorMenu3 a').removeClass('active');
-                    $('.anchorMenu4 a').addClass('active');
-                });
-            });
-        </script>
-
-        <script>
-            $(function(){
-                $.get("./ajax_text/ajax_data1.txt", function(data){
-                    $("#ajax_dataBox1").html(data);
-                })
-                $.get("./ajax_text/ajax_data2.txt", function(data){
-                    $("#ajax_dataBox2").html(data);
-                })
-                $.get("./ajax_text/ajax_data3.txt", function(data){
-                    $("#ajax_dataBox3").html(data);
-                })
-            })
-        </script>
 
 
         <div id="coupon_line">
