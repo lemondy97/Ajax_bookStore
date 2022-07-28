@@ -5,9 +5,15 @@
   src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
   src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
 }
+@font-face {
+  font-family: "UNPGothicKS";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/UNPGothicKS.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 section {
   width: 100%;
-  height: 7600px;
+  height: 7550px;
 }
 section #location_container {
   width: 100%;
@@ -96,16 +102,19 @@ section #section_contents1 .contentBox2 p:nth-of-type(1) {
   margin-top: 10px;
   margin-left: 50px;
   color: #555;
+  font-family: "UNPGothicKS";
 }
 section #section_contents1 .contentBox2 p:nth-of-type(2) {
   margin-top: 3px;
   margin-left: 50px;
   color: #555;
+  font-family: "UNPGothicKS";
 }
 section #section_contents1 .contentBox2 div {
   width: 100%;
   height: 50px;
   margin-left: 50px;
+  font-family: "UNPGothicKS";
 }
 section #section_contents1 .contentBox2 div a {
   color: #f26532;
@@ -132,6 +141,9 @@ section #section_contents1 .contentBox2 table td {
 section #section_contents1 .contentBox2 table td:nth-of-type(1) {
   font-weight: bold;
   font-family: "NanumBarunGothic";
+}
+section #section_contents1 .contentBox2 table td:nth-of-type(2) {
+  font-family: "UNPGothicKS";
 }
 section #section_contents1 .contentBox2 > span:nth-of-type(1), section #section_contents1 .contentBox2 > span:nth-of-type(2) {
   border: 1px solid #c1c1c1;
@@ -304,10 +316,12 @@ section #ajax_dataBox1 {
   width: 900px;
   height: 285px;
   margin: 0 auto;
+  font-family: "UNPGothicKS";
 }
 section #ajax_dataBox1 h3 {
   margin-top: 50px;
   color: #F26C3B;
+  margin-bottom: 25px;
 }
 section #ajax_dataBox1 p {
   font-size: 14px;
@@ -317,13 +331,17 @@ section #ajax_dataBox2 {
   width: 900px;
   height: 615px;
   margin: 0 auto;
+  font-family: "UNPGothicKS";
 }
 section #ajax_dataBox2 h3 {
   margin-top: 50px;
   color: #F26C3B;
+  margin-bottom: 25px;
 }
 section #ajax_dataBox2 .subject_li {
   font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 section #ajax_dataBox2 p:nth-of-type(2), section #ajax_dataBox2 p:nth-of-type(3), section #ajax_dataBox2 p:nth-of-type(4), section #ajax_dataBox2 p:nth-of-type(5), section #ajax_dataBox2 p:nth-of-type(6) {
   font-size: 14px;
@@ -338,6 +356,7 @@ section #ajax_dataBox3 {
   width: 900px;
   height: 545px;
   margin: 0 auto;
+  font-family: "UNPGothicKS";
 }
 section #ajax_dataBox3 h3 {
   margin-top: 50px;
@@ -436,6 +455,7 @@ section #assessment_space .review_space textarea {
   color: #666;
   line-height: 20px;
   overflow: auto;
+  margin-top: 20px;
 }
 section #assessment_space .review_space .regist_button, section #assessment_space .review_space .cancel_button {
   margin-left: 100px;
@@ -445,6 +465,8 @@ section #assessment_space .review_space .regist_button, section #assessment_spac
   border-radius: 4px;
   font-weight: 600;
   box-shadow: 0 2px #f2f2f2;
+  width: 50px;
+  height: 30px;
 }
 section #assessment_space .review_space .cancel_button {
   margin-left: 0;
@@ -464,6 +486,7 @@ section #review_tab p {
   position: absolute;
   top: 50%;
   left: 30%;
+  font-family: "UNPGothicKS";
 }
 section #review_tab #tab {
   width: 100%;
@@ -507,6 +530,7 @@ section #ajax_container1 h4 {
 }
 section #ajax_container1 h5 {
   color: #999;
+  font-family: "NanumBarunGothic";
 }
 section #ajax_container1 .ajax_box1, section #ajax_container1 .ajax_box2, section #ajax_container1 .ajax_box3, section #ajax_container1 .ajax_box4, section #ajax_container1 .ajax_box5 {
   width: 20%;
@@ -525,6 +549,7 @@ section #ajax_container2 h4 {
 }
 section #ajax_container2 h5 {
   color: #999;
+  font-family: "NanumBarunGothic";
 }
 section #ajax_container2 .ajax_box6, section #ajax_container2 .ajax_box7, section #ajax_container2 .ajax_box8, section #ajax_container2 .ajax_box9, section #ajax_container2 .ajax_box10 {
   width: 20%;
@@ -532,7 +557,7 @@ section #ajax_container2 .ajax_box6, section #ajax_container2 .ajax_box7, sectio
 }
 section #ebook_explain {
   width: 900px;
-  height: 300px;
+  height: 250px;
   margin: 0 auto;
   background: #f4f4f4;
   border-radius: 4px;
@@ -547,4 +572,5 @@ section #ebook_explain ul li {
   list-style: square;
   font-size: 14px;
   color: #666;
+  font-family: "UNPGothicKS";
 }
